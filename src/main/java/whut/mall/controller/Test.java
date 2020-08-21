@@ -20,4 +20,10 @@ public class Test {
     public String test(){
         return "hello";
     }
+
+    @GetMapping("/shoping")
+    public String test1()
+    {
+        return "nothing";
+    }
 }

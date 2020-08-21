@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <meta charset="utf-8"/>
-    <title>绿色农场</title>
+    <title>军训必需品平台</title>
     <!--导入核心文件-->
     <script src="../../bootstrap3/js/holder.js"></script>
     <link href="../../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -22,13 +20,10 @@
 </head>
 
 <body>
+
 <!--头部-->
-<header class="header">
-
-    <img src="../../images/index/stumalllogo.png" alt=""/>
-    <span class="pull-right"><h3><small>欢迎访问</small><b>绿色农场</b></h3></span>
-
-</header>
+<div id="headPage"></div>
+<br/>
 <!--主体-->
 <div class="container mycontent text-left">
     <!--透明层 -->
@@ -61,7 +56,6 @@
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" id="auto">自动登录
-
                         </label>
 
                     </div>
@@ -73,7 +67,7 @@
             <div class="form-group">
                 <label class="col-md-3 control-label"></label>
                 <div class="col-md-8">
-                    <input id="btn-login" class="btn btn-success" type="button" value="用户登录"/>
+                    <input id="btn-login" class="btn btn-primary" type="button" value="用户登录"/>
 
                     <span class="pull-right"><small>还没有账号？</small><a href="register.html">注册</a></span>
                 </div>
@@ -91,7 +85,10 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#footerPage").load("footerTemplate.html");
+        //加载页首页面
+        $("#headPage").load("../template/headTemplate.html");
+        //加载页脚页面
+        $("#footerPage").load("../template/footerTemplate.html");
     });
 
     $("#btn-login").click(function () {
@@ -122,5 +119,4 @@
 
 </script>
 </body>
-
 </html>

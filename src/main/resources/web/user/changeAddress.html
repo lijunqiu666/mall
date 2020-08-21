@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit"/>
+    <title>军训必需品平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../bootstrap3/js/holder.js"></script>
+    <link href="../../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../../bootstrap3/jquery-getUrlParam.js"></script>
+    <script src="../../bootstrap3/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/footer.css"/>
+
+    <!---这个文件要大改！！！！-->
+
+</head>
+
+<body>
+<!--头部-->
+<div id="headPage"></div>
+
+
+<div class="container">
+    <div class="col-md-2">
+        <!--左侧导航开始-->
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <!--主选项：我的订单-->
+                    <p class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">我的订单</a>
+                    </p>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div><a href="orders.html">全部订单</a></div>
+                        <div><a href="orders.html">待付款</a></div>
+                        <div><a href="orders.html">待收货</a></div>
+                        <div><a href="orders.html">待评价</a></div>
+                        <div><a href="orders.html">退货退款</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <!--主选项：资料修改-->
+                    <p class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">资料修改</a>
+                    </p>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div><a href="password.html">修改密码</a></div>
+                        <div><a href="userdata.html">个人资料</a></div>
+                        <div><a href="upload.html">上传头像</a></div>
+                        <div><a href="address.html"><b>收货管理</b></a></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--左侧导航结束-->
+    </div>
+    <div class="col-md-10">
+        <div class="panel panel-default">
+            <ul class="nav nav-tabs">
+                <li><a href="password.html">修改密码</a></li>
+                <li><a href="userdata.html">个人资料</a></li>
+                <li><a href="upload.html">上传头像</a></li>
+                <li class="active"><a href="#">收货管理</a></li>
+
+            </ul>
+            <div class="panel-body">
+                <!--新增收货地址表单开始-->
+                <form id="form-address" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"><span class="txtred">*</span>收货人：</label>
+                        <div class="col-md-8">
+                            <input id="name" name="name" type="text" class="form-control" placeholder="请输入收货人姓名">
+                        </div>
+                    </div>
+                    <div class="address_content" data-toggle="distpicker">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span class="txtred">*</span>省/直辖市：</label>
+                            <div class="col-md-3">
+                                <select name="province" class="form-control" data-province="---- 选择省 ----"
+                                        id="provinces">
+                                    <option id="province" value="0">---- 请选择 ----</option>
+                                </select>
+                            </div>
+                            <label class="col-md-2 control-label"><span class="txtred">*</span>城市：</label>
+                            <div class="col-md-3">
+                                <select name="city" class="form-control" data-city="---- 选择市 ----" id="cities">
+                                    <option id="city" value="0">---- 请选择 ----</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="col-md-2 control-label"><span class="txtred">*</span>区县：</label>
+                            <div class="col-md-3">
+                                <select name="area" class="form-control" data-district="---- 选择区 ----" id="areas">
+                                    <option id="area" value="0">---- 请选择 ----</option>
+                                </select>
+                            </div>
+                            <label class="col-md-2 control-label">邮政编码：</label>
+                            <div class="col-md-3">
+                                <input id="zip" name="zip" type="text" class="form-control" placeholder="请输入邮政编码">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"><span class="txtred">*</span>详细地址：</label>
+                        <div class="col-md-8">
+                            <textarea id="address" name="address" class="form-control" rows="3"
+                                      placeholder="输入详细的收货地址，小区名称、门牌号等"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"><span class="txtred">*</span>手机：</label>
+                        <div class="col-md-3">
+                            <input id="phone" name="phone" type="text" class="form-control" placeholder="请输入手机号码">
+                        </div>
+                        <label class="col-md-2 control-label">固话：</label>
+                        <div class="col-md-3">
+                            <input id="tel" name="tel" type="text" class="form-control" placeholder="请输入固定电话号码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">地址类型：</label>
+                        <div class="col-md-8">
+                            <input id="tag" name="tag" type="text" class="form-control"
+                                   placeholder="请输入地址类型，如：家、公司或者学校">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"><a href="address.html">返回</a>&nbsp;&nbsp;&nbsp;</label>
+                        <div class="col-sm-10">
+                            <input id="btn-submit" type="button" class="col-md-1 btn btn-primary" value="保存"/>
+                            <input type="reset" class="col-md-offset-1 col-md-1 btn btn-primary" value="重置"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 页脚 -->
+<div id="footerPage"></div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //加载页首页面
+        $("#headPage").load("../template/topTemplate.html");
+        //加载页脚页面
+        $("#footerPage").load("../template/footerTemplate.html");
+
+        // 加载当前用户的收货地址列表
+        showList();
+    });
+
+    // 1. 加载省数据的列表
+    function getProvinceList() {
+        // 清空当前的列表
+        $("#provinces").empty();
+        // 添加默认选项
+        var op = '<option value="0">---- 请选择 ----</option>';
+        $("#provinces").append(op);
+
+        // 提交请求
+        var url = "../../district/list/86";
+        $.ajax({
+            "url": url,
+            "type": "POST",
+            "dataType": "json",
+            "success": function (json) {
+                // 这里没有抛出异常，state一定是200
+                // 这个请求，一定是在登录后才有的，所以不存在session过期的情况
+                var list = json.data;
+                for (var i = 0; i < list.length; i++) {
+                    // 在控制台输出信息,省的代号和名称
+                    console.log(list[i].code + "-" + list[i].name);
+                    // 将数据放到页面中去
+                    var op = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
+                    $("#provinces").append(op);
+                }
+            }
+        });
+    }
+
+    // 2. 加载市列表
+    function getCityList() {
+        $("#cities").empty();
+        // 设置默认显示方式，注意这里的value就是代号值
+        var op = '<option value="0">---- 请选择 ----</option>';
+        $("#cities").append(op);
+
+        // 因为城市是随着省的变化而改变的，
+        // 所以我们这里首先要获得省的code来确定市的列表
+        var code = $("#provinces").val();
+        // 常规判空操作
+        if (code == null) {
+            return;
+        }
+
+        var url = "../../district/list/" + code;
+        $.ajax({
+            "url": url,
+            "type": "POST",
+            "dataType": "json",
+            "success": function (json) {
+                // 常规习惯输出，检验结果
+                // 先获取值
+                var list = json.data;
+                for (var i = 0; i < list.length; i++) {
+                    // 输出测试
+                    console.log(list[i].code + "-" + list[i].name);
+                    // 对值进行赋值
+                    var op = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
+                    $("#cities").append(op);
+                }
+            }
+        });
+    }
+
+    // 3. 加载区列表
+    function getAreaList() {
+        $("#areas").empty();
+        var op = '<option value="0">--- 请选择 ---</option>';
+        $("#areas").append(op);
+
+        var code = $("#cities").val();
+
+        if (code == 0) {
+            return;
+        }
+
+        var url = "../../district/list/" + code;
+        $.ajax({
+            "url": url,
+            "type": "POST",
+            "dataType": "json",
+            "success": function (json) {
+                var list = json.data;
+                for (var i = 0; i < list.length; i++) {
+                    console.log(list[i].code + "-" + list[i].name);
+                    var op = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
+                    $("#areas").append(op);
+
+                }
+            }
+        });
+
+    }
+
+    // 当页面加载完成时
+    $(document).ready(function () {
+        // 获取url中的id
+        var id = $.getUrlParam("id");
+        console.log("id=" + id);
+        if (id != null) {
+            // 显示收货地址详情
+            showAddressDetails(id);
+
+        }
+
+        // 加载省列表
+        getProvinceList();
+        // 当省列表发生改变的后
+        $("#provinces").change(function () {
+            // 加载市列表，已经含有清空操作
+            getCityList();
+
+            // 这里是每当省级列表发生改变，就会重新初始化
+            $("#areas").empty();
+            // 添加默认选项
+            var op = '<option value="0">--- 请选择---</option>';
+            $("#areas").append(op);
+
+            $("#cities").change(function () {
+                // 当市级列表发生改变就是加载区级列表
+                getAreaList();
+            });
+
+        })
+    });
+
+    function showAddressDetails(id) {
+        var url = "../../address/info/" + id;
+        $.ajax({
+            "url": url,
+            "type": "GET",
+            "dataType": "json",
+            "success": function (json) {
+                var address = json.data;
+                console.log("address=" + JSON.stringify(address));
+                //  是在地址栏上，我们认为用户提交的数据都是不靠谱的
+                if (address == null) {
+                    location.href = "address.html";
+                    return;
+                }
+                // 对district数据进行拆分
+                console.log("district=" + address.district);
+                // 存
+                var district = address.district;
+                // 拆
+                var disArray = district.split("-");
+                for (var i = 0; i < disArray.length; i++) {
+                    console.log(disArray[i]);
+                }
+                // 赋值
+                var pro = disArray[0];
+                var cit = disArray[1];
+                var are = disArray[2];
+
+                // 赋值
+                // 为输入框确认值
+                $("#name").val(address.name);
+                $("#zip").val(address.zip);
+                $("#address").val(address.address);
+                $("#phone").val(address.phone);
+                $("#tel").val(address.tel);
+                $("#tag").val(address.tag);
+                /*<option id="province" value="0">---- 请选择 ----</option>*/
+                $("#provinces").empty();
+                var op1 = '<option id="province" value="' + address.province + '">' + pro + '</option>';
+                $("#provinces").append(op1);
+                //$("#provinces").append(op1);
+                $("#cities").empty();
+                var op2 = '<option value="' + address.city + '">' + cit + '</option>';
+                $("#cities").append(op2);
+                $("#areas").empty();
+                var op3 = '<option value="' + address.area + '">' + are + '</option>';
+                $("#areas").append(op3);
+
+                // $("#province").attr("value",address.province);
+                // $("#city").val("value",address.city);
+                // $("#area").val("value",address.area);
+
+            },
+            "error": function () {
+                // 当数据类型不匹配的话，就会出错
+                // 可以返回到一个单独的界面
+                location.href = "address.html";
+            }
+        });
+    }
+
+
+    // 为按钮添加jquery事件
+    $("#btn-submit").click(function () {
+        var id = $.getUrlParam("id");
+        console.log("click---" + id);
+        var url = "../../address/change_info/" + id;
+        var data = $("#form-address").serialize();
+        $.ajax({
+            "url": url,
+            "data": data,
+            "type": "GET",
+            "dataType": "json",
+            "success": function (json) {
+                console.log("click-200--" + json.data);
+                if (json.state == 200) {
+                    alert("保存成功！");
+                } else {
+                    alert(json.message);
+                }
+            },
+            "error": function (xhr, text, errorThrown) {
+                alert("您登陆的信息已经过期!请重新登录!");
+                location.href = "login.html";
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

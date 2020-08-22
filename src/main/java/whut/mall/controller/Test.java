@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * mall
  * 2020/8/20 16:58
- * 测试类 测试
+ * 测试类
  *
  * @author 李俊秋
  **/

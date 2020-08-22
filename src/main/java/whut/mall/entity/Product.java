@@ -33,5 +33,99 @@ public class Product {
     public Product() {
     }
 
+    public long getProduct_id() {
+        return product_id;
+    }
 
+    public void setProduct_id(long product_id) {
+        this.product_id = product_id;
+    }
+
+    public String getProduct_name() {
+        return product_name;
+    }
+
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
+    }
+
+    public long getPrice() {
+        return price;
+    }
+
+    public void setPrice(long price) {
+        this.price = price;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
+    }
+
+    public Shop getShops() {
+        return shops;
+    }
+
+    public void setShops(Shop shops) {
+        this.shops = shops;
+    }
+
+    public List<Stock> getStock() {
+        return stock;
+    }
+
+    public void setStock(List<Stock> stock) {
+        this.stock = stock;
+    }
+
+    public List<Colour> getColour() {
+        return colour;
+    }
+
+    public void setColour(List<Colour> colour) {
+        this.colour = colour;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "product_id=" + product_id +
+                ", product_name='" + product_name + '\'' +
+                ", price=" + price +
+                ", status=" + status +
+                ", image='" + image + '\'' +
+                ", introduction='" + introduction + '\'' +
+                ", shops=" + shops +
+                ", stock=" + stock +
+                ", colour=" + colour +
+                ", comments=" + comments +
+                '}';
+    }
 }

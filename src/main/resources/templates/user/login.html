@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8"/>
     <title>军训必需品平台</title>
@@ -45,8 +45,11 @@
         <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
 <!--                这个是用户登录的具体内容-->
+
+
+
                 <!--表单开始-->
-                <form id="form-login" class="form-horizontal" role="form">
+                <form id="form-login" class="form-horizontal" role="form" action="/user/login" method="post">
                     <!--用户名-->
                     <div class="form-group">
                         <label for="username" class="col-md-3 control-label">用户账号：</label>
@@ -78,19 +81,26 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label"></label>
                         <div class="col-md-8">
-                            <input id="btn-login" class="btn btn-primary" type="button" value="用户登录"/>
+                            <input id="btn-login" class="btn btn-primary" type="submit" value="用户登录"/>
 
+<!--                            跳转解析不了-->
                             <span class="pull-right"><small>还没有账号？</small><a href="register.html">注册</a></span>
                         </div>
 
                     </div>
+                    <div class="ui error mini message"></div>
+                    <!-- #strings内置对象   -->
+                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">111</div>
 
                 </form>
 
             </div>
             <div class="layui-tab-item">
+
+
+
                 <!--表单开始-->
-                <form id="form-login-admin" class="form-horizontal" role="form">
+                <form id="form-login-admin" class="form-horizontal" role="form" action="/admin/login" method="post">
                     <!--用户名-->
                     <div class="form-group">
                         <label for="username" class="col-md-3 control-label">管理员账号：</label>
@@ -122,7 +132,7 @@
                     <div class="form-group">
                         <label class="col-md-3 control-label"></label>
                         <div class="col-md-8">
-                            <input id="btn-login-admin" class="btn btn-primary" type="button" value="管理员登录"/>
+                            <input id="btn-login-admin" class="btn btn-primary" type="submit" value="管理员登录"/>
                         </div>
 
                     </div>
@@ -150,57 +160,57 @@
         $("#footerPage").load("../template/footerTemplate.html");
     });
 
-    $("#btn-login").click(function () {//用户登录提交按钮
-        // 控制器路径
-        var url = "../../user/login.do";
-        // 对表单序列化操作，input框内容封装到data中
-        var data = $("#form-login").serialize();
-        $.ajax({
-            "url": url,
-            "data": data,
-            "type": "POST",
-            "dataType": "json",//json数据交互
-            "success": function (json) {
-                if (json.state === 200) {
-                    alert("登录成功!");
-                    location.href = "index.html";
-                    // 将头像数据保存到cookies中
-                    $.cookie("avatar", json.data.avatar, {
-                        expires: 7
-                    });
-                    console.log("登录成功，将头像路径存到Cookie：" + $.cookie("avatar"));
-                } else {
-                    alert(json.message);
-                }
-            }
-        });
-    });
-
-    $("#btn-login-admin").click(function () {//管理员登录提交按钮
-        // 控制器路径
-        var url = "../../admin/login.do";
-        // 对表单序列化操作，input框内容封装到data中
-        var data = $("#form-login").serialize();
-        $.ajax({
-            "url": url,
-            "data": data,
-            "type": "POST",
-            "dataType": "json",//json数据交互
-            "success": function (json) {
-                if (json.state === 200) {
-                    alert("登录成功!");
-                    location.href = "index.html";
-                    // 将头像数据保存到cookies中
-                    $.cookie("avatar", json.data.avatar, {
-                        expires: 7
-                    });
-                    console.log("登录成功，将头像路径存到Cookie：" + $.cookie("avatar"));
-                } else {
-                    alert(json.message);
-                }
-            }
-        });
-    });
+    // $("#btn-login").click(function () {//用户登录提交按钮
+    //     // 控制器路径
+    //     var url = "../../user/login.do";
+    //     // 对表单序列化操作，input框内容封装到data中
+    //     var data = $("#form-login").serialize();
+    //     $.ajax({
+    //         "url": url,
+    //         "data": data,
+    //         "type": "POST",
+    //         "dataType": "json",//json数据交互
+    //         "success": function (json) {
+    //             if (json.state === 200) {
+    //                 alert("登录成功!");
+    //                 location.href = "index.html";
+    //                 // 将头像数据保存到cookies中
+    //                 $.cookie("avatar", json.data.avatar, {
+    //                     expires: 7
+    //                 });
+    //                 console.log("登录成功，将头像路径存到Cookie：" + $.cookie("avatar"));
+    //             } else {
+    //                 alert(json.message);
+    //             }
+    //         }
+    //     });
+    // });
+    //
+    // $("#btn-login-admin").click(function () {//管理员登录提交按钮
+    //     // 控制器路径
+    //     var url = "../../admin/login.do";
+    //     // 对表单序列化操作，input框内容封装到data中
+    //     var data = $("#form-login").serialize();
+    //     $.ajax({
+    //         "url": url,
+    //         "data": data,
+    //         "type": "POST",
+    //         "dataType": "json",//json数据交互
+    //         "success": function (json) {
+    //             if (json.state === 200) {
+    //                 alert("登录成功!");
+    //                 location.href = "index.html";
+    //                 // 将头像数据保存到cookies中
+    //                 $.cookie("avatar", json.data.avatar, {
+    //                     expires: 7
+    //                 });
+    //                 console.log("登录成功，将头像路径存到Cookie：" + $.cookie("avatar"));
+    //             } else {
+    //                 alert(json.message);
+    //             }
+    //         }
+    //     });
+    // });
 
     layui.use('element', function(){
         var $ = layui.jquery

@@ -2761,3 +2761,315 @@ Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving temp
 2020-08-23 18:28:39.088  INFO 232 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-08-23 18:28:39.088  INFO 232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-08-23 18:28:39.097  INFO 232 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-08-23 18:35:55.698  INFO 9576 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on DESKTOP-3801D38 with PID 9576 (E:\ideaprogram\internship\mall\target\classes started by ljq in E:\ideaprogram\internship\mall)
+2020-08-23 18:35:55.703  INFO 9576 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-23 18:35:56.313  INFO 9576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-23 18:35:56.602  INFO 9576 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-23 18:35:57.861  INFO 9576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-23 18:35:58.015  INFO 9576 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88ms. Found 3 JPA repository interfaces.
+2020-08-23 18:35:59.162  INFO 9576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-23 18:35:59.177  INFO 9576 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-23 18:35:59.177  INFO 9576 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-23 18:35:59.515  INFO 9576 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-23 18:35:59.524  INFO 9576 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2921 ms
+2020-08-23 18:35:59.767  INFO 9576 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-23 18:35:59.821  INFO 9576 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-23 18:35:59.913  WARN 9576 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-23 18:35:59.916  INFO 9576 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-23 18:36:00.267  INFO 9576 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-23 18:36:00.497  WARN 9576 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-23 18:36:00.530  INFO 9576 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-23 18:36:00.748  INFO 9576 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-23 18:36:00.869  INFO 9576 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-23 18:36:00.873  INFO 9576 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-23 18:36:05.496  INFO 9576 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-23 18:36:05.535  INFO 9576 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-23 18:36:07.286  INFO 9576 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-23 18:36:07.308  INFO 9576 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-23 18:36:07.880  INFO 9576 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-23 18:36:07.894  INFO 9576 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 13.248 seconds (JVM running for 16.156)
+2020-08-23 18:36:54.150  INFO 9576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-23 18:36:54.151  INFO 9576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-23 18:36:54.163  INFO 9576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-08-23 21:00:30.272  INFO 5792 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on DESKTOP-3801D38 with PID 5792 (E:\ideaprogram\internship\mall\target\classes started by ljq in E:\ideaprogram\internship\mall)
+2020-08-23 21:00:30.277  INFO 5792 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-23 21:00:30.430  INFO 5792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-23 21:00:30.432  INFO 5792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-23 21:00:31.801  INFO 5792 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-23 21:00:31.927  INFO 5792 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112ms. Found 3 JPA repository interfaces.
+2020-08-23 21:00:32.889  INFO 5792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-23 21:00:32.905  INFO 5792 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-23 21:00:32.906  INFO 5792 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-23 21:00:33.111  INFO 5792 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-23 21:00:33.111  INFO 5792 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2679 ms
+2020-08-23 21:00:33.356  INFO 5792 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-23 21:00:33.408  INFO 5792 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-23 21:00:33.493  INFO 5792 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-23 21:00:33.787  WARN 5792 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-23 21:00:33.815  INFO 5792 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-23 21:00:34.153  WARN 5792 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-23 21:00:34.153  INFO 5792 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-23 21:00:34.242  INFO 5792 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-23 21:00:34.315  INFO 5792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-23 21:00:34.319  INFO 5792 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-23 21:00:35.579  INFO 5792 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-23 21:00:35.609  INFO 5792 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-23 21:00:38.399  INFO 5792 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-23 21:00:38.415  INFO 5792 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-23 21:00:39.192  INFO 5792 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-23 21:00:39.210  INFO 5792 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 9.915 seconds (JVM running for 12.782)
+2020-08-23 21:02:29.735  INFO 5792 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-23 21:02:29.736  INFO 5792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-23 21:02:29.746  INFO 5792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-08-23 21:02:31.421  WARN 5792 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2020-08-23 21:02:43.357  WARN 5792 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /register.html
+2020-08-23 21:02:43.623  WARN 5792 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-23 21:02:43.708  WARN 5792 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-23 21:04:10.879  WARN 5792 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /template/topTemplate.html
+2020-08-23 21:04:10.881  WARN 5792 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:11:28.499  INFO 17128 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on DESKTOP-3801D38 with PID 17128 (E:\ideaprogram\internship\mall\target\classes started by ljq in E:\ideaprogram\internship\mall)
+2020-08-23 21:11:28.503  INFO 17128 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-23 21:11:28.633  INFO 17128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-23 21:11:28.633  INFO 17128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-23 21:11:29.939  INFO 17128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-23 21:11:30.155  INFO 17128 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 167ms. Found 3 JPA repository interfaces.
+2020-08-23 21:11:31.287  INFO 17128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-23 21:11:31.302  INFO 17128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-23 21:11:31.303  INFO 17128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-23 21:11:31.514  INFO 17128 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-23 21:11:31.515  INFO 17128 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2881 ms
+2020-08-23 21:11:31.826  INFO 17128 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-23 21:11:31.898  INFO 17128 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-23 21:11:31.985  INFO 17128 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-23 21:11:32.232  WARN 17128 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-23 21:11:32.354  INFO 17128 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-23 21:11:32.532  WARN 17128 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-23 21:11:32.542  INFO 17128 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-23 21:11:32.630  INFO 17128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-23 21:11:32.730  INFO 17128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-23 21:11:32.735  INFO 17128 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-23 21:11:33.933  INFO 17128 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-23 21:11:33.963  INFO 17128 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-23 21:11:35.339  INFO 17128 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-23 21:11:35.351  INFO 17128 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-23 21:11:35.993  INFO 17128 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-23 21:11:36.006  INFO 17128 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 8.52 seconds (JVM running for 12.719)
+2020-08-23 21:12:13.061  INFO 17128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-23 21:12:13.061  INFO 17128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-23 21:12:13.068  INFO 17128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-23 21:12:13.086  WARN 17128 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /register.html
+2020-08-23 21:12:14.647  WARN 17128 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-23 21:12:15.018  WARN 17128 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-23 21:12:22.102  WARN 17128 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /register.html
+2020-08-23 21:12:22.199  WARN 17128 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-23 21:12:22.201  WARN 17128 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-23 21:12:38.303  WARN 17128 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:12:38.305  WARN 17128 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:13:27.894  WARN 17128 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for POST /user/reg
+2020-08-23 21:13:31.574  WARN 17128 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for POST /user/reg
+2020-08-23 21:13:31.957  WARN 17128 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for POST /user/reg
+2020-08-23 21:13:32.124  WARN 17128 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for POST /user/reg
+2020-08-23 21:13:32.845  WARN 17128 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for POST /user/reg
+2020-08-23 21:13:33.009  WARN 17128 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for POST /user/reg
+2020-08-23 21:15:10.223  INFO 13088 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on DESKTOP-3801D38 with PID 13088 (E:\ideaprogram\internship\mall\target\classes started by ljq in E:\ideaprogram\internship\mall)
+2020-08-23 21:15:10.229  INFO 13088 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-23 21:15:10.441  INFO 13088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-23 21:15:10.450  INFO 13088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-23 21:15:14.947  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-23 21:15:15.291  INFO 13088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 327ms. Found 3 JPA repository interfaces.
+2020-08-23 21:15:16.498  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-23 21:15:16.510  INFO 13088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-23 21:15:16.510  INFO 13088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-23 21:15:16.658  INFO 13088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-23 21:15:16.658  INFO 13088 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6206 ms
+2020-08-23 21:15:17.290  INFO 13088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-23 21:15:17.341  INFO 13088 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-23 21:15:17.433  INFO 13088 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-23 21:15:17.727  WARN 13088 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-23 21:15:17.733  INFO 13088 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-23 21:15:18.020  INFO 13088 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-23 21:15:18.029  WARN 13088 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-23 21:15:18.198  INFO 13088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-23 21:15:18.316  INFO 13088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-23 21:15:18.321  INFO 13088 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-23 21:15:19.216  INFO 13088 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-23 21:15:19.241  INFO 13088 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-23 21:15:20.862  INFO 13088 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-23 21:15:20.896  INFO 13088 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-23 21:15:21.500  INFO 13088 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-23 21:15:21.514  INFO 13088 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 12.44 seconds (JVM running for 15.237)
+2020-08-23 21:15:32.514  INFO 13088 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-23 21:15:32.514  INFO 13088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-23 21:15:32.522  INFO 13088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-08-23 21:15:33.980  WARN 13088 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:15:33.999  WARN 13088 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:16:33.113  INFO 17232 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on DESKTOP-3801D38 with PID 17232 (E:\ideaprogram\internship\mall\target\classes started by ljq in E:\ideaprogram\internship\mall)
+2020-08-23 21:16:33.119  INFO 17232 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-23 21:16:33.255  INFO 17232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-23 21:16:33.255  INFO 17232 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-23 21:16:34.962  INFO 17232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-23 21:16:35.064  INFO 17232 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89ms. Found 3 JPA repository interfaces.
+2020-08-23 21:16:36.288  INFO 17232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-23 21:16:36.307  INFO 17232 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-23 21:16:36.307  INFO 17232 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-23 21:16:36.479  INFO 17232 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-23 21:16:36.480  INFO 17232 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3225 ms
+2020-08-23 21:16:36.775  INFO 17232 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-23 21:16:36.849  INFO 17232 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-23 21:16:37.004  INFO 17232 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-23 21:16:37.265  WARN 17232 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-23 21:16:37.387  INFO 17232 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-23 21:16:37.540  WARN 17232 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-23 21:16:37.541  INFO 17232 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-23 21:16:37.633  INFO 17232 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-23 21:16:37.692  INFO 17232 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-23 21:16:37.697  INFO 17232 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-23 21:16:38.603  INFO 17232 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-23 21:16:38.633  INFO 17232 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-23 21:16:40.049  INFO 17232 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-23 21:16:40.057  INFO 17232 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-23 21:16:40.646  INFO 17232 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-23 21:16:40.656  INFO 17232 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 8.664 seconds (JVM running for 11.178)
+2020-08-23 21:16:46.018  INFO 17232 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-23 21:16:46.018  INFO 17232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-23 21:16:46.025  INFO 17232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-23 21:16:46.601  WARN 17232 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:16:46.602  WARN 17232 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:16:53.448  WARN 17232 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:16:53.451  WARN 17232 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:19:20.221  INFO 15504 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on DESKTOP-3801D38 with PID 15504 (E:\ideaprogram\internship\mall\target\classes started by ljq in E:\ideaprogram\internship\mall)
+2020-08-23 21:19:20.253  INFO 15504 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-23 21:19:20.450  INFO 15504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-23 21:19:20.450  INFO 15504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-23 21:19:22.996  INFO 15504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-23 21:19:23.987  INFO 15504 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 979ms. Found 3 JPA repository interfaces.
+2020-08-23 21:19:25.421  INFO 15504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-23 21:19:25.433  INFO 15504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-23 21:19:25.434  INFO 15504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-23 21:19:25.624  INFO 15504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-23 21:19:25.625  INFO 15504 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5174 ms
+2020-08-23 21:19:27.681  INFO 15504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-23 21:19:27.744  INFO 15504 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-23 21:19:27.829  INFO 15504 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-23 21:19:28.082  WARN 15504 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-23 21:19:28.267  INFO 15504 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-23 21:19:28.434  WARN 15504 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-23 21:19:28.618  INFO 15504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-23 21:19:28.799  INFO 15504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-23 21:19:28.977  INFO 15504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-23 21:19:28.980  INFO 15504 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-23 21:19:30.211  INFO 15504 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-23 21:19:30.242  INFO 15504 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-23 21:19:31.628  INFO 15504 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-23 21:19:31.639  INFO 15504 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-23 21:19:32.145  INFO 15504 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-23 21:19:32.155  INFO 15504 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 13.289 seconds (JVM running for 16.397)
+2020-08-23 21:19:58.077  INFO 15504 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-23 21:19:58.077  INFO 15504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-23 21:19:58.089  INFO 15504 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-08-23 21:20:01.757  WARN 15504 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:20:01.760  WARN 15504 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:27:15.252  INFO 1212 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on DESKTOP-3801D38 with PID 1212 (E:\ideaprogram\internship\mall\target\classes started by ljq in E:\ideaprogram\internship\mall)
+2020-08-23 21:27:15.258  INFO 1212 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-23 21:27:15.345  INFO 1212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-23 21:27:15.345  INFO 1212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-23 21:27:16.765  INFO 1212 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-23 21:27:16.911  INFO 1212 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127ms. Found 3 JPA repository interfaces.
+2020-08-23 21:27:17.747  INFO 1212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-23 21:27:17.759  INFO 1212 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-23 21:27:17.760  INFO 1212 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-23 21:27:17.915  INFO 1212 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-23 21:27:17.916  INFO 1212 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2570 ms
+2020-08-23 21:27:18.144  INFO 1212 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-23 21:27:18.198  INFO 1212 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-23 21:27:18.287  INFO 1212 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-23 21:27:18.536  WARN 1212 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-23 21:27:18.662  INFO 1212 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-23 21:27:18.898  WARN 1212 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-23 21:27:18.902  INFO 1212 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-23 21:27:18.983  INFO 1212 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-23 21:27:19.044  INFO 1212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-23 21:27:19.047  INFO 1212 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-23 21:27:20.053  INFO 1212 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-23 21:27:20.076  INFO 1212 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-23 21:27:21.579  INFO 1212 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-23 21:27:21.594  INFO 1212 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-23 21:27:22.322  INFO 1212 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-23 21:27:22.339  INFO 1212 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 8.101 seconds (JVM running for 10.826)
+2020-08-23 21:27:29.606  INFO 1212 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-23 21:27:29.607  INFO 1212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-23 21:27:29.620  INFO 1212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-08-23 21:27:31.310  WARN 1212 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:27:31.310  WARN 1212 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:27:38.991  WARN 1212 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:27:38.992  WARN 1212 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:36:57.032  INFO 8820 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on DESKTOP-3801D38 with PID 8820 (E:\ideaprogram\internship\mall\target\classes started by ljq in E:\ideaprogram\internship\mall)
+2020-08-23 21:36:57.043  INFO 8820 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-23 21:36:57.150  INFO 8820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-23 21:36:57.151  INFO 8820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-23 21:37:03.703  INFO 8820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-23 21:37:03.945  INFO 8820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 205ms. Found 3 JPA repository interfaces.
+2020-08-23 21:37:05.529  INFO 8820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-23 21:37:05.549  INFO 8820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-23 21:37:05.549  INFO 8820 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-23 21:37:05.736  INFO 8820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-23 21:37:05.738  INFO 8820 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8587 ms
+2020-08-23 21:37:06.029  INFO 8820 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-23 21:37:06.122  INFO 8820 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-23 21:37:06.267  INFO 8820 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-23 21:37:06.641  WARN 8820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-23 21:37:06.669  INFO 8820 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-23 21:37:06.990  INFO 8820 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-23 21:37:07.027  WARN 8820 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-23 21:37:07.189  INFO 8820 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-23 21:37:07.290  INFO 8820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-23 21:37:07.295  INFO 8820 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-23 21:37:08.341  INFO 8820 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-23 21:37:08.371  INFO 8820 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-23 21:37:10.307  INFO 8820 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-23 21:37:10.322  INFO 8820 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-23 21:37:11.389  INFO 8820 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-23 21:37:11.405  INFO 8820 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 15.957 seconds (JVM running for 18.313)
+2020-08-23 21:37:18.939  INFO 8820 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-23 21:37:18.939  INFO 8820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-23 21:37:18.948  INFO 8820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-08-23 21:37:34.035  WARN 8820 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:37:34.038  WARN 8820 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:37:35.853  WARN 8820 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-08-23 21:37:59.565  WARN 8820 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-08-23 21:39:16.240  INFO 12952 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on DESKTOP-3801D38 with PID 12952 (E:\ideaprogram\internship\mall\target\classes started by ljq in E:\ideaprogram\internship\mall)
+2020-08-23 21:39:16.265  INFO 12952 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-23 21:39:16.386  INFO 12952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-23 21:39:16.386  INFO 12952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-23 21:39:19.263  INFO 12952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-23 21:39:19.500  INFO 12952 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 217ms. Found 3 JPA repository interfaces.
+2020-08-23 21:39:20.886  INFO 12952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-23 21:39:20.933  INFO 12952 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-23 21:39:20.933  INFO 12952 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-23 21:39:21.329  INFO 12952 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-23 21:39:21.330  INFO 12952 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4943 ms
+2020-08-23 21:39:21.565  INFO 12952 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-23 21:39:21.629  INFO 12952 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-23 21:39:21.732  INFO 12952 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-23 21:39:22.272  WARN 12952 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-23 21:39:22.444  INFO 12952 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-23 21:39:22.618  WARN 12952 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-23 21:39:22.657  INFO 12952 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-23 21:39:22.753  INFO 12952 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-23 21:39:22.834  INFO 12952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-23 21:39:22.838  INFO 12952 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-08-23 21:39:23.966  INFO 12952 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-23 21:39:24.045  INFO 12952 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-08-23 21:39:26.167  INFO 12952 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-23 21:39:26.218  INFO 12952 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-23 21:39:28.339  INFO 12952 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-23 21:39:28.376  INFO 12952 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 13.692 seconds (JVM running for 17.473)
+2020-08-23 21:39:38.748  INFO 12952 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-23 21:39:38.748  INFO 12952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-23 21:39:38.762  INFO 12952 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-08-23 21:39:48.786  WARN 12952 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:39:48.789  WARN 12952 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:39:54.205  WARN 12952 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-23 21:39:54.209  WARN 12952 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-23 21:44:46.241  WARN 12952 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /template/topTemplate.html
+2020-08-23 21:44:46.243  WARN 12952 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html

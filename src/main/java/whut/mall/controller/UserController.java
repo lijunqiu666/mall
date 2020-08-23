@@ -55,15 +55,25 @@ public class UserController {
     @PostMapping("/register")
     public String register(String username, String password, String email, String phone, RedirectAttributes redirectAttributes) {
         Integer i = userService.register(username, MD5Utils.code(password), email, phone);
+        System.out.println(i);
         if (i > 0) {
             redirectAttributes.addFlashAttribute("message", "注册成功");
+            return "user/login";
+
+
         } else {
             redirectAttributes.addFlashAttribute("message", "注册失败");
+            return "redirect:/user/jump_to_register";
+
         }
 
 
-        return "user/login";
+    }
 
+    //登陆页面的href跳转到注册页面
+    @GetMapping("/jump_to_register")
+    public String jumpToRegister() {
+        return "user/register";
     }
 
 

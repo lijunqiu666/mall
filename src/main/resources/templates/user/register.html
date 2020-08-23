@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8"/>
     <title>军训必需品平台</title>
@@ -27,7 +27,7 @@
         <h4>新用户注册</h4>
         <hr/>
         <!--表单开始-->
-        <form id="form-reg" class="form-horizontal" role="form">
+        <form id="form-reg" class="form-horizontal" role="form" method="post" action="/user/register">
             <!--用户名-->
             <div class="form-group">
                 <label class="col-md-3 control-label">名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp字：</label>
@@ -39,14 +39,14 @@
             <div class="form-group">
                 <label class="col-md-3 control-label"> 密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</label>
                 <div class="col-md-8">
-                    <input id="password" name="password" type="text" class="form-control" placeholder="请输入密码">
+                    <input id="password" name="password" type="password" class="form-control" placeholder="请输入密码">
                 </div>
             </div>
             <!--确认密码-->
             <div class="form-group">
                 <label class="col-md-3 control-label"> 确认密码：</label>
                 <div class="col-md-8">
-                    <input id="repassword" type="text" class="form-control" placeholder="请再次输入密码">
+                    <input id="repassword" type="password" class="form-control" placeholder="请再次输入密码">
                 </div>
             </div>
 
@@ -68,11 +68,14 @@
             <div class="form-group">
                 <label class="col-md-3 control-label"></label>
                 <div class="col-md-8">
-                    <input id="btn-reg" class="btn btn-primary" type="button" value="立即注册"/>
+                    <input id="btn-reg" class="btn btn-primary" type="submit" value="立即注册"/>
 
-                    <span class="pull-right"><small>已经有账号？</small><a href="login.html">登录</a></span>
+                    <span class="pull-right"><small>已经有账号？</small><a href="/user">登录</a></span>
                 </div>
             </div>
+            <div class="ui error mini message"></div>
+            <!-- #strings内置对象   -->
+            <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">111</div>
 
         </form>
     </div>
@@ -93,27 +96,27 @@
 
 
     // 为注册按钮绑定单击事件
-    $("#btn-reg").click(function () {
-        var url = "../../../user/reg";
-        // 将前端数据封装到data中
-        var data = $("#form-reg").serialize();
-        console.log("注册参数：" + data);
-        $.ajax({
-            "url": url,
-            "data": data,
-            "type": "POST",
-            "dataType": "json",
-            "success": function (json) {
-                // alert(json.state);
-                if (json.state == 200) {
-                    alert("注册成功!");
-                    location.href = "login.html";
-                } else {
-                    alert(json.message);
-                }
-            }
-        });
-    });
+    // $("#btn-reg").click(function () {
+    //     var url = "../../../user/register";
+    //     // 将前端数据封装到data中
+    //     var data = $("#form-reg").serialize();
+    //     console.log("注册参数：" + data);
+    //     $.ajax({
+    //         "url": url,
+    //         "data": data,
+    //         "type": "POST",
+    //         "dataType": "json",
+    //         "success": function (json) {
+    //             // alert(json.state);
+    //             if (json.state == 200) {
+    //                 alert("注册成功!");
+    //                 location.href = "login.html";
+    //             } else {
+    //                 alert(json.message);
+    //             }
+    //         }
+    //     });
+    // });
 
 </script>
 </body>

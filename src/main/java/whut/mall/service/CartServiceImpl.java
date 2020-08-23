@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import whut.mall.entity.Cart;
 import whut.mall.entity.Product;
 import whut.mall.entity.User;
-import whut.mall.repositiry.CartRepository;
+import whut.mall.repository.CartRepository;
 
 import javax.persistence.criteria.*;
 import java.util.Date;
@@ -24,6 +24,7 @@ public class CartServiceImpl implements CartService{
     @Autowired
     CartRepository cartRepository;
 
+    @Override
     public int addCart(User user, Product product, int quantity) {
         //是否需要先查询User而构建完整的user呢？
         //将cart对象设置完整
@@ -34,13 +35,14 @@ public class CartServiceImpl implements CartService{
     cart.setQuantity(quantity);
     cart.setUpdate_time(new Date());
         Cart cart1= cartRepository.save(cart);
-        if(cart1!=null)
+        if(cart1!=null) {
             return 1;
+        }
         return 0;
     }
 
     @Override
-    public Page<Cart> listCart(Pageable pageable, User user) {
+    public Page<Cart> listCart(Pageable pageable, final User user) {
 
         return cartRepository.findAll(new Specification() {
             @Override

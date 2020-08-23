@@ -1,6 +1,7 @@
 package whut.mall.entity;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -11,14 +12,14 @@ import java.util.Date;
  **/
 
 @Entity
-@Table(name = "order")
+@Table(name = "t_order")
 public class Order {
     @Id
     @GeneratedValue
     Long id;
     @ManyToOne
     User user;
-    Double pay;
+    BigDecimal pay;
     @Temporal(TemporalType.TIMESTAMP)
     Date order_time;
     Boolean status;
@@ -42,11 +43,11 @@ public class Order {
         this.user = user;
     }
 
-    public Double getPay() {
+    public BigDecimal getPay() {
         return pay;
     }
 
-    public void setPay(Double pay) {
+    public void setPay(BigDecimal pay) {
         this.pay = pay;
     }
 

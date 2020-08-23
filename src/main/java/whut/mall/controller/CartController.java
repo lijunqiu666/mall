@@ -1,4 +1,4 @@
-package whut.mall.controller.cart;
+package whut.mall.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;

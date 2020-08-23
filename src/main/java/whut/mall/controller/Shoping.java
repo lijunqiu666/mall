@@ -1,4 +1,4 @@
-package whut.mall.controller.shoping;
+package whut.mall.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

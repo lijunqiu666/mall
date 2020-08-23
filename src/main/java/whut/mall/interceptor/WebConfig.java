@@ -19,4 +19,5 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 .excludePathPatterns("/user")
                 .excludePathPatterns("/user/login");
     }
+
 }

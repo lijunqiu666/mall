@@ -28,8 +28,8 @@ public class User {
     private String address;//售货地址
 
     //用户和商品之间的关系
-    @ManyToMany(mappedBy = "user")
-    private List<Product> productList = new ArrayList<>();
+//    @ManyToMany(mappedBy = "user")
+//    private List<Product> productList = new ArrayList<>();
 
 
     //用户和订单之间的关系
@@ -103,13 +103,13 @@ public class User {
         this.address = address;
     }
 
-    public List<Product> getProductList() {
-        return productList;
-    }
-
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
-    }
+//    public List<Product> getProductList() {
+//        return productList;
+//    }
+//
+//    public void setProductList(List<Product> productList) {
+//        this.productList = productList;
+//    }
 
     public List<Order> getOrderList() {
         return orderList;
@@ -130,7 +130,7 @@ public class User {
                 ", avatar='" + avatar + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
-                ", productList=" + productList +
+//                ", productList=" + productList +
                 ", orderList=" + orderList +
                 '}';
     }

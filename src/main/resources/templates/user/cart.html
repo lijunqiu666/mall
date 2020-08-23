@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>军训必需品平台</title>
+    <!--导入核心文件-->
+    <script src="../../static/bootstrap3/js/holder.js"></script>
+    <link href="../../static/bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../static/bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../../static/bootstrap3/js/bootstrap.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/cart.css"/>
+    <script src="../../static/js/cart.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+<!--头部-->
+<div id="headPage"></div>
+
+
+<div class="col-md-offset-1 col-md-10">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title"><span class="fa fa-shopping-cart"></span> 购物车</h3>
+        </div>
+        <div class="panel-body">
+            <!--下面表单中需要添加method，和action=跳转的页面，通过submit提交数据给下一个页面-->
+            <form role="form" method="get" action="orderConfirm.html">
+                <!--购物车表格开始-->
+                <table class="cart-table" width="100%">
+                    <thead>
+                    <tr>
+                        <th width="8%">
+                            <input type="checkbox" class="ckall" onclick="checkall(this)"/>全选
+                        </th>
+                        <th width="110"></th>
+                        <th width="29%">商品</th>
+                        <th width="11%">单价</th>
+                        <th width="15%">数量</th>
+                        <th width="11%">金额</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="cart-list" class="cart-body">
+<!--                   数据库的数据-->
+                    </tbody>
+                </table>
+                <div class="total-bar">
+                    <a href="javascript:selDelCart()" class="cart-del-sel btn btn-default btn-xs">删除所选商品</a>
+                    <span class="pull-right">已选商品
+								<span id="selectCount">0</span>件 总价¥
+							<span id="selectTotal">0</span>元
+
+							</span>
+
+                </div>
+                <div>
+							<span class="pull-right">
+								<input type="submit" value="  结  算  " class="btn btn-primary btn-lg link-account"/>
+							</span>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<!-- 页脚 -->
+<div id="footerPage"></div>
+
+<!--页脚结束-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        //加载页首页面
+        $("#headPage").load("../template/headTemplate.html");
+        //加载页脚页面
+        $("#footerPage").load("../template/footerTemplate.html");
+    });
+
+    $(function () {
+        //返回链接
+        $(".link-account").click(function () {
+            location.href = "orderConfirm.html";
+        })
+    })
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        showCartList();
+        //开始时计算价格
+        calcTotal();
+        console.log("come here啊啊啊啊");
+
+
+    });
+
+    //单选一个也得算价格
+    function chooseOne(){
+        $(this).checked;
+        console.log("come here");
+        calcTotal();
+    }
+
+    function showCartList() {
+        $.ajax({
+            "url": "../../cart/list",
+            "type": "GET",
+            "dataType": "json",
+            "success": function (json) {
+                var list = json.data;
+                console.log("list.length=" + list.length);
+
+                $("#cart-list").empty();
+
+                for (var i = 0; i < list.length; i++) {
+                    var html = '<tr>'
+                        + '<td>'
+                        + '<input type="checkbox" name="cart_id" value="#{id}" class="ckitem" onclick="chooseOne()"/>'
+                        + '</td>'
+                        + '<td><img src="../../..#{image}collect.png" width="110" /></td>'
+                        + '<td>#{title}</td>'
+                        + '<td>¥<span id="goodsPrice#{id}">#{price}</span></td>'
+                        + '<td>'
+                        + '<input type="button" value="-" class="num-btn" onclick="reduceNum(#{id})" />'
+                        + '<input id="goodsCount#{id}" type="text" size="2" readonly="readonly" class="num-text" value="#{count}">'
+                        + '<input class="num-btn" type="button" value="+" onclick="addCount(#{id})" />'
+                        + '</td>'
+                        + '<td><span id="goodsTotalPrice#{id}">#{total_price}</span></td>'
+                        + '<td><input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="删除"/></td>'
+                        + '</tr>';
+
+                    html = html.replace(/#{id}/g, list[i].id);
+                    html = html.replace(/#{image}/g, list[i].image);
+                    html = html.replace(/#{title}/g, list[i].title);
+                    html = html.replace(/#{price}/g, list[i].newPrice);
+                    html = html.replace(/#{count}/g, list[i].count);
+                    html = html.replace(/#{total_price}/g, (list[i].newPrice * list[i].count));
+
+                    $("#cart-list").append(html);
+                }
+            }
+        });
+    }
+
+    function addCount(id) {
+        var url = "../../cart/add_count";
+        var data = "id=" + id;
+        $.ajax({
+            "url": url,
+            "data": data,
+            "type": "GET",
+            "dataType": "json",
+            "success": function (json) {
+                // alert("OK");
+                var count = parseInt($("#goodsCount" + id).val());
+                count++;
+                $("#goodsCount" + id).val(count)
+
+                // 取输入框中的内容用val()函数,但是要取出span这类标签的时候要用html()
+                var p = parseFloat($("#goodsPrice" + id).html());
+                var tp = p * count;
+                $("#goodsTotalPrice" + id).html(tp);
+            }
+            // ,
+            // "error": function () {
+            //     alert("您的登录信息已经过期!请重新登录!");
+            //     location.href = "login.html";
+            // }
+        });
+    }
+
+    function reduceNum(id) {
+        var url = "../../cart/reduce_count";
+        var data = "id=" + id;
+        $.ajax({
+            "url": url,
+            "data": data,
+            "type": "GET",
+            "dataType": "json",
+            "success": function (json) {
+                // alert("OK");
+                var count = parseInt($("#goodsCount" + id).val());
+                count--;
+                $("#goodsCount" + id).val(count)
+
+                // 取输入框中的内容用val()函数,但是要取出span这类标签的时候要用html()
+                var p = parseInt($("#goodsPrice" + id).html());
+                var tp = p * count;
+                $("#goodsTotalPrice" + id).html(tp);
+            }
+
+        });
+    }
+
+</script>
+</body>
+
+</html>

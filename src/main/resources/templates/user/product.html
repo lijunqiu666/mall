@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8"/>
+    <title>军训必需品平台</title>
+    <!--导入核心文件-->
+    <script src="../../static/bootstrap3/js/holder.js"></script>
+    <link href="../../static/bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../static/bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../../static/bootstrap3/js/bootstrap.js"></script>
+    <script src="../../static/bootstrap3/jquery-getUrlParam.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/product.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/imgmove.css"/>
+    <script src="../../static/js/product.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../static/js/imgmove.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        .style_img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+<!--头部-->
+<div id="headPage"></div>
+
+
+<!--商品信息展示开始-->
+<div class="col-md-offset-1 col-md-10">
+    <div class="col-md-6">
+
+        <div data="1" class="img-big move-img col-md-12">
+            <img id="img1-big" src="../../static/images/portal/11DELLran7000R1605Ssilvery/1_big.png" width="100%"/>
+        </div>
+        <div data="2" class="img-big move-img col-md-12">
+            <img id="img2-big" src="../../static/images/portal/11DELLran7000R1605Ssilvery/2_big.png" width="100%"/>
+        </div>
+        <div data="3" class="img-big move-img col-md-12">
+            <img id="img3-big" src="../../static/images/portal/11DELLran7000R1605Ssilvery/3_big.png" width="100%"/>
+        </div>
+        <div data="4" class="img-big move-img col-md-12">
+            <img id="img4-big" src="../../static/images/portal/11DELLran7000R1605Ssilvery/4_big.png" width="100%"/>
+        </div>
+        <div data="5" class="img-big move-img col-md-12">
+            <img id="img5-big" src="../../static/images/portal/11DELLran7000R1605Ssilvery/5_big.png" width="100%"/>
+        </div>
+
+        <div data="1" class="col-md-2 img-small">
+            <img id="img1" src="../../static/images/portal/11DELLran7000R1605Ssilvery/1.jpg" width="100%"/>
+        </div>
+        <div data="2" class="col-md-2 img-small">
+            <img id="img2" src="../../static/images/portal/11DELLran7000R1605Ssilvery/2.jpg" width="100%"/>
+        </div>
+        <div data="3" class="col-md-2 img-small">
+            <img id="img3" src="../../static/images/portal/11DELLran7000R1605Ssilvery/3.jpg" width="100%"/>
+        </div>
+        <div data="4" class="col-md-2 img-small">
+            <img id="img4" src="../../static/images/portal/11DELLran7000R1605Ssilvery/4.jpg" width="100%"/>
+        </div>
+        <div data="5" class="col-md-2 img-small">
+            <img id="img5" src="../../static/images/portal/11DELLran7000R1605Ssilvery/5.jpg" width="100%"/>
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+        <h3 id="goods-title" class="col-md-12 title-row-1" title="【买1送1】广西百香果包邮新鲜热带当季水果整箱5白香果带箱6斤10">买1送1！广西百香果包邮</h3>
+        <h4 class="col-md-12 text-row-1"><small id="goods-sell-point">各地特产！多买多送！</small></h4>
+        <div class="col-md-12 price-bar">
+            <small>售价：</small>¥<span id="goods-price">24.8</span>
+            <div><small>*退货补运费 *7天无理由退货 *24小时快速退款 </small></div>
+        </div>
+        <form class="form-inline product-form col-md-12" role="form">
+            <div class="col-md-12 form-space">
+                <label for="num">数量：</label>
+                <input id="numDown" type="button" value="-" class="num-btn"/>
+                <input id="num" type="text" size="2" readonly="readonly" class="num-text" value="1">
+                <input id="numUp" class="num-btn" type="button" value="+"/>
+            </div>
+            <div class="col-md-12 form-space">
+                <h4><small><b>绿色农场</b>发货并提供售后服务,今日下单,明日送达</small></h4>
+
+            </div>
+            <div class="col-md-12 form-space">
+
+                <input class="btn btn-primary btn-lg btn-block" type="button" value="立即购买">
+
+            </div>
+
+            <div class="col-md-12 form-space">
+
+                <button id="btn-add-to-cart" type="button" class="btn btn-default"><span class="fa fa-cart-plus"></span>
+                    加入购物车
+                </button>
+
+                <button type="button" class="btn btn-default"><span class="fa fa-heart-o"></span> 加入收藏</button>
+
+            </div>
+        </form>
+
+    </div>
+
+</div>
+<!--商品信息展示结束-->
+<div class="col-md-offset-1 col-md-10">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">发表评论</h3>
+        </div>
+        <div class="panel panel-body ">
+            <div class="col-md-12 ">
+                <div class="col-md-1 saled-icon"><img
+                        src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
+                        class="style_img"></span></div>
+                <div class="col-md-11 saled-title">鹏弟弟</div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="col-md-offset-1 col-md-11 saled-content">
+                    <textarea id="comment_content" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="col-md-11"></div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-success" onclick="relase_comment()">发表评论</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-offset-1 col-md-10">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">产品评论</h3>
+        </div>
+        <div id="show">
+            <div class="panel panel-body ">
+                <div class="col-md-12 ">
+                    <div class="col-md-1 saled-icon"><img
+                            src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
+                            class="style_img"></span></div>
+                    <div class="col-md-11 saled-title">鹏弟弟</div>
+                </div>
+                <div class="col-md-12 ">
+                    <div class="col-md-offset-1 col-md-11 saled-content">绿色农场销售并发货的商品，由绿色农场提供发票和相应的售后服务。请您放心购买！
+                        注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--售后信息开始-->
+
+<div class="col-md-offset-1 col-md-10">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">售后保障</h3>
+        </div>
+        <div class="panel-body ">
+            <div class="col-md-12 ">
+                <div class="col-md-1 saled-icon"><span class="fa fa-shield"></span></div>
+                <div class="col-md-11 saled-title">正品保障</div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="col-md-offset-1 col-md-11 saled-content">绿色农场向您保证所售商品均为正品行货，绿色农场自营商品开具机打发票或电子发票。</div>
+            </div>
+
+            <div class="col-md-12 ">
+                <div class="col-md-1 saled-icon"><span class="fa fa-wrench"></span></div>
+                <div class="col-md-11 saled-title">厂家服务</div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="col-md-offset-1 col-md-11 saled-content">本产品全国联保，享受三包服务，质保期为：二年质保</div>
+            </div>
+
+            <div class="col-md-12 ">
+                <div class="col-md-1 saled-icon"><span class="fa fa-heartbeat"></span></div>
+                <div class="col-md-11 saled-title">郑重承诺</div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="col-md-offset-1 col-md-11 saled-content">绿色农场销售并发货的商品，由绿色农场提供发票和相应的售后服务。请您放心购买！
+                    <br/>
+                    注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+                </div>
+            </div>
+
+            <div class="col-md-12 ">
+                <div class="col-md-1 saled-icon"><span class="fa fa-globe"></span></div>
+                <div class="col-md-11 saled-title">全国联保</div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="col-md-offset-1 col-md-11 saled-content">
+                    凭质保证书及绿色农场发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由学子商城联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。学子商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！
+                    <br/>
+                    注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+
+                </div>
+            </div>
+
+            <div class="col-md-12 ">
+                <div class="col-md-1 saled-icon"><span class="fa fa-reply"></span></div>
+                <div class="col-md-11 saled-title">无忧退货</div>
+            </div>
+            <div class="col-md-12 ">
+                <div class="col-md-offset-1 col-md-11 saled-content">
+                    客户购买绿色农场商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。（部分商品除外，详情请见各商品细则）
+                </div>
+            </div>
+
+            <div class="col-md-12 saled-content">
+
+                <small><b>权利声明：</b><br/>
+                    所有商品信息、商品咨询等内容，是绿色农场重要的经营资源，未经许可，禁止非法转载使用。<br/>
+                    注：本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。</small>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 页脚 -->
+<div id="footerPage"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //加载页首页面
+        $("#headPage").load("../template/topTemplate.html");
+        //加载页脚页面
+        $("#footerPage").load("../template/footerTemplate.html");
+
+        // 加载当前用户的收货地址列表
+        showList();
+    });
+</script>
+
+<script type="text/javascript">
+    // 当前页面处理的商品id
+    var id;
+
+    var url = "../../comment/list";
+    // 发送ajax请求，并处理请求
+    // $.ajax({
+    // 	"url":url,
+    // 	"type":"POST",
+    // 	"data" :{},
+    // 	"dataType":"json",
+    // 	"success":function(json) {
+    // 		if (json.state == 200) {
+    // 			$("#show").empty();
+    // 			var list = json.data;
+    // 			for (var i = 0; i < list.length ; i++) {
+    // 				console.log(list[i].content+"-"+list[i].title);
+    // 				// var html='<div class="col-md-12">' +
+    // 				// 		'<div class="col-md-7 text-row-2"><a href="product.html?id=#{id}">#{title}</a></div>' +
+    // 				// 		'<div class="col-md-2">¥#{price}</div>' +
+    // 				// 		'<div class="col-md-3"><img src="../..#{image}collect.png" width="100%" /></div>' +
+    // 				// 		'</div>';
+    // 				var html='<div class="panel panel-body ">' +
+    // 						'<div class="col-md-12 ">' +
+    // 						'<div class="col-md-1 saled-icon"><img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="style_img"></span></div>' +
+    // 						'<div class="col-md-11 saled-title">鹏弟弟</div>' +
+    // 						'</div>' +
+    // 						'<div class="col-md-12 ">' +
+    // 						'<div class="col-md-offset-1 col-md-11 saled-content">#{comment}</div>' +
+    // 						'</div>' +
+    // 						'</div>'
+    // 				html = html.replace(/#{comment}/g,list[i].comment);
+    // 				$("#show").append(html);
+    // 			}
+    // 		} else {
+    // 			alert(json.message);
+    // 		}
+    // 	}
+    // 	,
+    // 	"error":function(xhr,text, errorThrown) {
+    // 		alert("获取评论错误！");
+    // 	}
+    // });
+    $(document).ready(function () {
+        // 获取URL中的id
+        id = $.getUrlParam("id");
+        console.log("id=" + id);
+        // 显示商品详情
+        showGoodsDetails(id);
+    });
+
+    function showGoodsDetails(id) {
+        var url = "../../farmProduct/details/" + id;
+        $.ajax({
+            "url": url,
+            "type": "GET",
+            "dataType": "json",
+            "success": function (json) {
+                console.log("goods=" + json.state);
+                var goods = json.data;
+                if (goods == null) {
+                    // 去其他页面，例如主页或者404
+                    location.href = "index.html";
+                    return;
+                }
+
+                $("#goods-title").html(goods.title);
+                $("#goods-sell-point").html(goods.sellPoint);
+                $("#goods-price").html(goods.price)
+
+                $("#img1-big").attr("src", "../.." + goods.image + "1_big.png");
+                $("#img1").attr("src", "../.." + goods.image + "1.jpg");
+                $("#img2-big").attr("src", "../.." + goods.image + "2_big.png");
+                $("#img2").attr("src", "../.." + goods.image + "2.jpg");
+                $("#img3-big").attr("src", "../.." + goods.image + "3_big.png");
+                $("#img3").attr("src", "../.." + goods.image + "3.jpg");
+                $("#img4-big").attr("src", "../.." + goods.image + "4_big.png");
+                $("#img4").attr("src", "../.." + goods.image + "4.jpg");
+                $("#img5-big").attr("src", "../.." + goods.image + "5_big.png");
+                $("#img5").attr("src", "../.." + goods.image + "5.jpg");
+            }
+
+        });
+    }
+
+    // 处理"添加到购物车"
+    $("#btn-add-to-cart").click(function () {
+        var url = "../../cart/add_to_cart";
+        var pid = id;
+        var price = $("#goods-price").html();// 里面不传参数为取值
+        var count = $("#num").val();// 从上面的【输入框】取值
+        var data = "pid=" + pid + "&price=" + price + "&count=" + count;
+        console.log("[data] " + data);
+        $.ajax({
+            "url": url,
+            "data": data,
+            "type": "POST",
+            "dataType": "json",
+            "success": function (json) {
+                if (json.state == 200) {
+                    alert("添加成功!")
+                } else {
+                    // 这里一般情况是不会出现的
+                    alert("添加失败!" + json.message);
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>

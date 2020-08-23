@@ -16,6 +16,7 @@ public class Order_item {
     Long id;
    @ManyToOne
    Order order;
+
    Product product;
    Integer quantity;//商品数量
 

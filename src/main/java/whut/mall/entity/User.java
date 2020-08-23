@@ -28,7 +28,7 @@ public class User {
     private String address;//售货地址
 
     //用户和商品之间的关系
-    @ManyToMany(mappedBy = "user")
+    @ManyToMany(mappedBy = "users")
     private List<Product> productList = new ArrayList<>();
 
 

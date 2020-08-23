@@ -13,16 +13,21 @@ public class Product {
     @GeneratedValue
     private long product_id;
     private String product_name;  //产品名称
-    private long price;           //产品价格
-    private boolean status;       //产品审核状态
+    private Double price;           //产品价格
+    private Boolean status;       //产品审核状态
     private String image;         //产品配图
     private String introduction;  //产品简介
+    private String kind;//产品种类
+
 
     @ManyToOne
     private Shop shops;          //产品商家
 
     @ManyToMany(cascade = {CascadeType.PERSIST})
-    private List<Stock> stock=new ArrayList<>();      //产品种类
+    private List<Stock> stock=new ArrayList<>();      //产品库存
+
+    @ManyToMany(cascade = {CascadeType.PERSIST})
+    private List<User> users=new ArrayList<>();      //用户
 
     @OneToMany(mappedBy = "products")
     private List<Colour> colour=new ArrayList<>();          //产品颜色
@@ -49,19 +54,19 @@ public class Product {
         this.product_name = product_name;
     }
 
-    public long getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    public boolean isStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
@@ -81,6 +86,14 @@ public class Product {
         this.introduction = introduction;
     }
 
+    public String getKind() {
+        return kind;
+    }
+
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
+
     public Shop getShops() {
         return shops;
     }
@@ -95,6 +108,14 @@ public class Product {
 
     public void setStock(List<Stock> stock) {
         this.stock = stock;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 
     public List<Colour> getColour() {
@@ -122,8 +143,10 @@ public class Product {
                 ", status=" + status +
                 ", image='" + image + '\'' +
                 ", introduction='" + introduction + '\'' +
+                ", kind='" + kind + '\'' +
                 ", shops=" + shops +
                 ", stock=" + stock +
+                ", users=" + users +
                 ", colour=" + colour +
                 ", comments=" + comments +
                 '}';

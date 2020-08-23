@@ -31,6 +31,7 @@ public class AdminController {
     public String loginPage() {
         return "user/login";
     }
+
     @PostMapping("/login")
     //从前端得到用户名和密码
     public String login(String username, String password, HttpSession session, RedirectAttributes redirectAttributes){

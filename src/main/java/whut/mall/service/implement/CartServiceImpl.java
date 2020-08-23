@@ -1,4 +1,4 @@
-package whut.mall.service;
+package whut.mall.service.implement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -9,6 +9,7 @@ import whut.mall.entity.Cart;
 import whut.mall.entity.Product;
 import whut.mall.entity.User;
 import whut.mall.repositiry.CartRepository;
+import whut.mall.service.CartService;
 
 import javax.persistence.criteria.*;
 import java.util.Date;
@@ -20,7 +21,7 @@ import java.util.Date;
  * Date 2020/8/22 21:59
  **/
 @Service
-public class CartServiceImpl implements CartService{
+public class CartServiceImpl implements CartService {
     @Autowired
     CartRepository cartRepository;
 

@@ -10,15 +10,16 @@
     <title>军训必需品平台</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--导入核心文件-->
-    <script src="../../bootstrap3/js/holder.js"></script>
-    <link href="../../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <script src="../../bootstrap3/jquery-1.9.1.min.js"></script>
-    <script src="../../bootstrap3/js/bootstrap.js"></script>
+    <script src="../../static/bootstrap3/js/holder.js"></script>
+    <link href="../../static/bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../static/bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../../static/bootstrap3/js/bootstrap.js"></script>
+    <script src="../../static/bootstrap3/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
     <!-- 字体图标 -->
-    <link rel="stylesheet" href="../../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
-    <link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
-    <link rel="stylesheet" type="text/css" href="../../css/top.css"/>
-    <link rel="stylesheet" type="text/css" href="../../css/footer.css"/>
+    <link rel="stylesheet" href="../../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/footer.css"/>
 </head>
 
 <body>
@@ -57,53 +58,45 @@
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse in">
                     <div class="panel-body">
-                        <div><a href="password.html"><b>修改密码</b></a></div>
+                        <div><a href="password.html">修改密码</a></div>
                         <div><a href="userdata.html">个人资料</a></div>
-                        <div><a href="upload.html">上传头像</a></div>
+                        <div><a href="upload.html"><b>上传头像</b></a></div>
                         <div><a href="address.html">收货管理</a></div>
                         <!--<div><a href="../business/addRent.html">租赁管理</a></div>
                         <div><a href="../business/productManager.html">产品管理</a></div>-->
-
                     </div>
                 </div>
             </div>
         </div>
         <!--左侧导航结束-->
     </div>
-    <div class="col-md-10">
+    <div class="col-md-10	">
         <div class="panel panel-default">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#">修改密码</a></li>
+                <li><a href="password.html">修改密码</a></li>
                 <li><a href="userdata.html">个人资料</a></li>
-                <li><a href="upload.html">上传头像</a></li>
+                <li class="active"><a href="#">上传头像</a></li>
                 <li><a href="address.html">收货管理</a></li>
                 <!--<li><a href="../business/addRent.html">租赁管理</a></li>
                 <li><a href="../business/productManager.html">产品管理</a></li>-->
             </ul>
             <div class="panel-body">
-                <!--修改密码表单开始-->
-                <form id="form-change-password" class="form-horizontal" role="form">
+                <!--上传头像表单开始-->
+                <form id="form-upload" enctype="multipart/form-data" class="form-horizontal" role="form">
                     <div class="form-group">
-                        <label class="col-md-2 control-label">原密码：</label>
-                        <div class="col-md-8">
-                            <input name="old_password" type="text" class="form-control" placeholder="请输入原密码">
+                        <label class="col-md-2 control-label">选择头像:</label>
+                        <div class="col-md-1">
+                            <img id="img-avatar" src="../../static/images/index/user.jpg" class="img-responsive"/>
+                            <input name="file" type="file">
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">新密码：</label>
-                        <div class="col-md-8">
-                            <input name="new_password" type="text" class="form-control" placeholder="请输入新密码">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label">确认密码：</label>
-                        <div class="col-md-8">
-                            <input type="text" class="form-control" placeholder="请再次输入新密码">
-                        </div>
+                        <!--<div class="clearfix"></div>
+                        <div class="col-md-offset-2 col-md-4">
+
+                        </div>-->
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input id="btn-change" type="button" class="btn btn-primary" value="修改"/>
+                            <input id="btn-upload" type="button" class="btn btn-primary" value="上传"/>
                         </div>
                     </div>
                 </form>
@@ -111,7 +104,6 @@
         </div>
     </div>
 </div>
-
 <!-- 页脚 -->
 <div id="footerPage"></div>
 
@@ -128,24 +120,47 @@
 </script>
 
 <script type="text/javascript">
-    $("#btn-change").click(function () {
-        // 控制器路径
-        var url = "../../user/password.do";
-        var data = $("#form-change-password").serialize();
+    $(document).ready(function () {
+        // 在登录之后，会将 头像数据放到cookies中，我们需要在这里取到
+        // 头像的数据，并把它放在cookie中
+        if ($.cookie("avatar") != null) {
+            $("#img-avatar").attr("src", $.cookie("avatar"));
+        }
+    });
+
+</script>
+
+<script type="text/javascript">
+    $("#btn-upload").click(function () {
+        var url = "../../user/upload.do";
+        var data = new FormData($("#form-upload")[0]);
         $.ajax({
             "url": url,
             "data": data,
             "type": "POST",
             "dataType": "json",
+            "contentType": false,/*上传文件必须要的*/
+            "processData": false,/*上传文件必须要的*/
             "success": function (json) {
+                console.log(json.data);
                 if (json.state == 200) {
-                    alert("修改成功");
+                    alert("修改头像成功!");
+                    $("#img-avatar").attr("src", json.data);
+                    // 把cookie做一个更新
+                    // 否则在第二次上传图片后，再次更新后，就不会显示最新上传的数据
+                    $.cookie("avatar", json.data, {
+                        expires: 7 /*有效期*/
+                    });
                 } else {
                     alert(json.message);
                 }
             },
+            "error": function () {
+                alert("出错!");
+            }
         });
     });
+
 </script>
 </body>
 

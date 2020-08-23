@@ -2,23 +2,21 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!--edge浏览器H5兼容设置-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--360浏览器H5兼容设置-->
     <meta name="renderer" content="webkit"/>
     <title>军训必需品平台</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--导入核心文件-->
-    <script src="../../bootstrap3/js/holder.js"></script>
-    <link href="../../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <script src="../../bootstrap3/jquery-1.9.1.min.js"></script>
-    <script src="../../bootstrap3/jquery-getUrlParam.js"></script>
-    <script src="../../bootstrap3/js/bootstrap.js"></script>
-    <!-- 字体图标 -->
-    <link rel="stylesheet" href="../../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
-    <link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
-    <link rel="stylesheet" type="text/css" href="../../css/top.css"/>
-    <link rel="stylesheet" type="text/css" href="../../css/footer.css"/>
+    <script src="../../static/bootstrap3/js/holder.js"></script>
+    <link href="../../static/bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../static/bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../../static/bootstrap3/jquery-getUrlParam.js"></script>
+    <script src="../../static/bootstrap3/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/footer.css"/>
+
+    <!---这个文件要大改！！！！-->
 
 </head>
 
@@ -152,16 +150,20 @@
     </div>
 </div>
 
+
 <!-- 页脚 -->
 <div id="footerPage"></div>
 
 
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function () {
         //加载页首页面
         $("#headPage").load("../template/topTemplate.html");
         //加载页脚页面
         $("#footerPage").load("../template/footerTemplate.html");
+
+        // 加载当前用户的收货地址列表
+        showList();
     });
 
     // 1. 加载省数据的列表
@@ -184,7 +186,7 @@
                 var list = json.data;
                 for (var i = 0; i < list.length; i++) {
                     // 在控制台输出信息,省的代号和名称
-                    // console.log(list[i].code+"-"+list[i].name);
+                    console.log(list[i].code + "-" + list[i].name);
                     // 将数据放到页面中去
                     var op = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
                     $("#provinces").append(op);
@@ -199,6 +201,7 @@
         // 设置默认显示方式，注意这里的value就是代号值
         var op = '<option value="0">---- 请选择 ----</option>';
         $("#cities").append(op);
+
         // 因为城市是随着省的变化而改变的，
         // 所以我们这里首先要获得省的code来确定市的列表
         var code = $("#provinces").val();
@@ -214,12 +217,12 @@
             "dataType": "json",
             "success": function (json) {
                 // 常规习惯输出，检验结果
-                // 取值
+                // 先获取值
                 var list = json.data;
                 for (var i = 0; i < list.length; i++) {
                     // 输出测试
                     console.log(list[i].code + "-" + list[i].name);
-                    // 赋值
+                    // 对值进行赋值
                     var op = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
                     $("#cities").append(op);
                 }
@@ -232,10 +235,13 @@
         $("#areas").empty();
         var op = '<option value="0">--- 请选择 ---</option>';
         $("#areas").append(op);
+
         var code = $("#cities").val();
+
         if (code == 0) {
             return;
         }
+
         var url = "../../district/list/" + code;
         $.ajax({
             "url": url,
@@ -247,19 +253,22 @@
                     console.log(list[i].code + "-" + list[i].name);
                     var op = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
                     $("#areas").append(op);
+
                 }
             }
         });
+
     }
 
     // 当页面加载完成时
     $(document).ready(function () {
-        // 获取id
+        // 获取url中的id
         var id = $.getUrlParam("id");
         console.log("id=" + id);
         if (id != null) {
             // 显示收货地址详情
             showAddressDetails(id);
+
         }
 
         // 加载省列表
@@ -268,6 +277,7 @@
         $("#provinces").change(function () {
             // 加载市列表，已经含有清空操作
             getCityList();
+
             // 这里是每当省级列表发生改变，就会重新初始化
             $("#areas").empty();
             // 添加默认选项
@@ -278,30 +288,8 @@
                 // 当市级列表发生改变就是加载区级列表
                 getAreaList();
             });
-        })
-    });
 
-    // 为按钮添加jquery事件
-    $("#btn-submit").click(function () {
-        var url = "../../address/create";
-        var data = $("#form-address").serialize();
-        $.ajax({
-            "url": url,
-            "data": data,
-            "type": "POST",
-            "dataType": "json",
-            "success": function (json) {
-                if (json.state == 200) {
-                    alert("保存成功！");
-                } else {
-                    alert(json.message);
-                }
-            },
-            "error": function (xhr, text, errorThrown) {
-                alert("您登陆的信息已经过期!请重新登录!");
-                location.href = "login.html";
-            }
-        });
+        })
     });
 
     function showAddressDetails(id) {
@@ -312,14 +300,14 @@
             "dataType": "json",
             "success": function (json) {
                 var address = json.data;
-                // console.log("address=" + JSON.stringify(address));
+                console.log("address=" + JSON.stringify(address));
                 //  是在地址栏上，我们认为用户提交的数据都是不靠谱的
                 if (address == null) {
                     location.href = "address.html";
                     return;
                 }
                 // 对district数据进行拆分
-                // console.log("district=" + address.district);
+                console.log("district=" + address.district);
                 // 存
                 var district = address.district;
                 // 拆
@@ -364,6 +352,33 @@
             }
         });
     }
+
+
+    // 为按钮添加jquery事件
+    $("#btn-submit").click(function () {
+        var id = $.getUrlParam("id");
+        console.log("click---" + id);
+        var url = "../../address/change_info/" + id;
+        var data = $("#form-address").serialize();
+        $.ajax({
+            "url": url,
+            "data": data,
+            "type": "GET",
+            "dataType": "json",
+            "success": function (json) {
+                console.log("click-200--" + json.data);
+                if (json.state == 200) {
+                    alert("保存成功！");
+                } else {
+                    alert(json.message);
+                }
+            },
+            "error": function (xhr, text, errorThrown) {
+                alert("您登陆的信息已经过期!请重新登录!");
+                location.href = "login.html";
+            }
+        });
+    });
 </script>
 </body>
 

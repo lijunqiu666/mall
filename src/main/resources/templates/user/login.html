@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8"/>
     <title>军训必需品平台</title>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="ui error mini message"></div>
                     <!-- #strings内置对象   -->
-                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">111</div>
+                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}" style="color: red">111</div>
 
                 </form>
 

@@ -6,7 +6,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import whut.mall.entity.Cart;
 import whut.mall.entity.Product;
@@ -53,23 +52,28 @@ public class CartController {
      *@Return Page<Cart>
      **/
     @GetMapping("/list")
-    public Page<Cart> showCart(@PageableDefault(size = 10, sort = "update_time", direction = Sort.Direction.DESC) Pageable pageable, HttpSession session, Model model) {
+    public Page<Cart> showCart(@PageableDefault(size = 10, sort = "update_time", direction = Sort.Direction.DESC) Pageable pageable, HttpSession session) {
         User user = (User) session.getAttribute("user");//找到该用户下的，分页的所有list
-        Page<Cart> page = cartService.listCart(pageable, user);
-        model.addAttribute("page", page);
         return cartService.listCart(pageable, user);
     }
 
-    @GetMapping("/add_count/{id}")
+    @GetMapping("/add_count")
     public int addPrice(@RequestParam("id") Long id)//购物车id
     {
         return cartService.addCount(id);//相应的购物车商品数量加一?
     }
 
 
-    @GetMapping("/reduce_count/{id}")
-    public int reduceCount(@RequestParam("id") Long id) {//返回状态码？
+    @GetMapping("/reduce_count")
+    public int reduceCount(@RequestParam("id") Long id) {
         return cartService.deleteCount(id);
 
     }
+
+    @GetMapping("/delete")
+    public int deleteCart(Long id)//参数为Cart的id
+    {
+        return cartService.deleteCart(id);
+    }
+
 }

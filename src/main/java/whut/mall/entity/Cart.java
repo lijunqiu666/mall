@@ -69,6 +69,7 @@ public class Cart {
         this.user = user;
     }
 
+
     @Override
     public String toString() {
         return "Cart{" +
@@ -76,6 +77,7 @@ public class Cart {
                 ", product=" + product +
                 ", quantity=" + quantity +
                 ", user=" + user +
+                ", update_time=" + update_time +
                 '}';
     }
 }

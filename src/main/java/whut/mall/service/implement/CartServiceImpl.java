@@ -13,6 +13,7 @@ import whut.mall.service.CartService;
 
 import javax.persistence.criteria.*;
 import java.util.Date;
+import java.util.Optional;
 
 /**
  * @ClassName CartServiceImpl
@@ -29,11 +30,14 @@ public class CartServiceImpl implements CartService {
         //是否需要先查询User而构建完整的user呢？
         //将cart对象设置完整
         //插入即可
-    Cart cart=new Cart();
-    cart.setUser(user);
-    cart.setProduct(product);
-    cart.setQuantity(quantity);
-    cart.setUpdate_time(new Date());
+       Cart c= cartRepository.getOneByUserAndProduct(user,product);
+       if(c!=null)
+           return addCount(c.getId());
+        Cart cart=new Cart();
+        cart.setUser(user);
+        cart.setProduct(product);
+        cart.setQuantity(quantity);
+        cart.setUpdate_time(new Date());
         Cart cart1= cartRepository.save(cart);
         if(cart1!=null)
             return 1;
@@ -56,7 +60,9 @@ public class CartServiceImpl implements CartService {
     @Override
     public int addCount(Long id) {
        Cart cart= cartRepository.getOne(id);
-        cart.setQuantity(cart.getQuantity()+1);
+        //        cart.setQuantity(cart.getQuantity()+1);
+       int i=cart.getQuantity();
+        cart.setQuantity(i+1);
         cartRepository.save(cart);
         return 1;
     }
@@ -66,6 +72,12 @@ public class CartServiceImpl implements CartService {
         Cart cart= cartRepository.getOne(id);
         cart.setQuantity(cart.getQuantity()-1);
         cartRepository.save(cart);
+        return 1;
+    }
+
+    public int deleteCart(Long id)
+    {
+        cartRepository.deleteById(id);
         return 1;
     }
 }

@@ -5,10 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import whut.mall.entity.Admin;
-import whut.mall.entity.PageInfo;
-import whut.mall.entity.Product;
-import whut.mall.entity.User;
+import whut.mall.entity.*;
 import whut.mall.service.AdminService;
 import whut.mall.util.MD5Utils;
 
@@ -57,12 +54,12 @@ public class AdminController {
 
     }
 
-    @GetMapping(value = {"/findAllProduct/{currentPage}","/findAllProduct"})
-    public String findAllProduct(@PathVariable(name = "currentPage",required = false) Integer currentPage, @RequestParam(defaultValue = "0") int flag, String productName, HttpSession session, Model model) {
+    @GetMapping(value = {"/findAllProduct/{currentPage}", "/findAllProduct"})
+    public String findAllProduct(@PathVariable(name = "currentPage", required = false) Integer currentPage, @RequestParam(defaultValue = "0") int flag, String productName, HttpSession session, Model model) {
 
         System.err.println(currentPage);
-        if (currentPage==null){
-            currentPage=1;
+        if (currentPage == null) {
+            currentPage = 1;
         }
 
 
@@ -85,7 +82,8 @@ public class AdminController {
 
     @GetMapping("/findPurchaseHistory")
     public String findPurchaseHistory() {
-
+        PurchaseHistory purchaseHistory = adminService.findAllHistory();
+        System.out.println(purchaseHistory);
 
 
         return "admin/purchaseHistory";
@@ -103,11 +101,10 @@ public class AdminController {
     }
 
     @PostMapping("/update.do")
-    public String update(Long product_id, String product_name, String kind, BigDecimal price,String introduction) {
+    public String update(Long product_id, String product_name, String kind, BigDecimal price, String introduction) {
 
-        int flag=adminService.update(product_id,product_name,kind,price,introduction);
+        int flag = adminService.update(product_id, product_name, kind, price, introduction);
         System.out.println(flag);
-
 
 
         return "redirect:findAllProduct";
@@ -115,32 +112,27 @@ public class AdminController {
     }
 
     @GetMapping("/{id}/delete")
-    public String deleteProduct(@PathVariable Long id){
+    public String deleteProduct(@PathVariable Long id) {
         adminService.deleteProduct(id);
-
 
 
         return "redirect:/admin/findAllProduct";
     }
 
     @RequestMapping("/add")
-    public String addProduct(){
+    public String addProduct() {
 
         return "admin/addProduct";
     }
 
     @RequestMapping("/add.do")
-    public String addProductDo(String product_name, String kind, BigDecimal price,String introduction){
-        adminService.addProduct(product_name,kind,price,introduction);
-
-
+    public String addProductDo(String product_name, String kind, BigDecimal price, String introduction) {
+        adminService.addProduct(product_name, kind, price, introduction);
 
 
         return "redirect:findAllProduct";
 
     }
-
-
 
 
     @GetMapping("/header")

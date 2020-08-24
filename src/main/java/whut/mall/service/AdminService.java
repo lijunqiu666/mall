@@ -2,15 +2,11 @@ package whut.mall.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import whut.mall.entity.Admin;
-import whut.mall.entity.PageInfo;
-import whut.mall.entity.Product;
-import whut.mall.entity.User;
+import whut.mall.entity.*;
 import whut.mall.repository.AdminRepository;
 import whut.mall.repository.ProductRepository;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -93,5 +89,9 @@ public class AdminService {
     public void addProduct(String product_name, String kind, BigDecimal price, String introduction) {
 
         productRepository.addProduct(product_name,kind,price,introduction);
+    }
+
+    public PurchaseHistory findAllHistory() {
+        return adminRepository.findallHistory();
     }
 }

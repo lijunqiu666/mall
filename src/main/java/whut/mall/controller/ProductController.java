@@ -51,7 +51,10 @@ public class ProductController {
     public String addOrUpdate(Product product, HttpSession session, RedirectAttributes attributes) {
 
         // 得到Stock对象 , 将Stock对象存储到对象中，    因为前台传递的Type对象中只有一个id  所以需要通过id找到整个type对象  再进行存储
-        product.setStock(stockService.getStockByID(product.getStock().getId()));
+
+
+        //有问题
+//        product.setStock(stockService.getStockByID(product.getStock().getId()));
         System.out.println(product);
 
 
@@ -72,16 +75,19 @@ public class ProductController {
 
     }
 
-    @PostMapping("/product/search")
-    public String search(@PageableDefault(size = 3, sort = "updateTime", direction = Sort.Direction.DESC) Pageable pageable,
-                         Model model, ProductQuery productQuery) {
 
 
-        // 携带查询条件  查找数据
-        System.out.println(productQuery);
-        model.addAttribute("page", productService.listProduct(pageable, productQuery));
-        return "admin/product :: productList";
-    }
+
+//    @PostMapping("/product/search")
+//    public String search(@PageableDefault(size = 3, sort = "updateTime", direction = Sort.Direction.DESC) Pageable pageable,
+//                         Model model, ProductQuery productQuery) {
+//
+//
+//        // 携带查询条件  查找数据
+//        System.out.println(productQuery);
+//        model.addAttribute("page", productService.listProduct(pageable, productQuery));
+//        return "admin/product :: productList";
+//    }
 }
 
 

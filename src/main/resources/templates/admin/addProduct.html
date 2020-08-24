@@ -91,38 +91,38 @@
         </section>
         <!-- 内容头部 /-->
 
-        <form action="/admin/update.do" method="post">
+        <form action="/admin/add.do" method="post">
             <!-- 正文区域 -->
             <section class="content"> <!--产品信息-->
 
                 <div class="panel panel-default">
                     <div class="panel-heading">产品信息</div>
                     <div class="row data-type">
-                        <div class="col-md-2 title">id</div>
-                        <div class="col-md-4 data">
-                            <input type="text" class="form-control" name="product_id"
-                                   placeholder="id" th:value="${product.product_id}">
-                        </div>
+<!--                        <div class="col-md-2 title">id</div>-->
+<!--                        <div class="col-md-4 data">-->
+<!--                            <input type="text" class="form-control" name="product_id"-->
+<!--                                   placeholder="id">-->
+<!--                        </div>-->
 
                         <div class="col-md-2 title">产品名称</div>
                         <div class="col-md-4 data">
                             <input type="text" class="form-control" name="product_name"
-                                   placeholder="产品名称" th:value="${product.product_name}">
+                                   placeholder="产品名称" >
                         </div>
                         <div class="col-md-2 title">产品种类</div>
                         <div class="col-md-4 data">
                             <input type="text" class="form-control" name="kind"
-                                   placeholder="产品种类" th:value="${product.kind}">
+                                   placeholder="产品种类" >
                         </div>
                         <div class="col-md-2 title">价格</div>
                         <div class="col-md-4 data">
                             <input type="text" class="form-control" name="price"
-                                   placeholder="价格" th:value="${product.price}">
+                                   placeholder="价格" >
                         </div>
                         <div class="col-md-2 title">介绍</div>
                         <div class="col-md-4 data">
                             <input type="text" class="form-control" name="introduction"
-                                   placeholder="介绍" th:value="${product.introduction}">
+                                   placeholder="介绍" >
                         </div>
 
 
@@ -130,7 +130,7 @@
                 </div>
                 <!--订单信息/--> <!--工具栏-->
                 <div class="box-tools text-center">
-                    <button type="submit" class="btn bg-maroon">保存</button>
+                    <button type="submit" class="btn bg-maroon">增加</button>
                     <button type="button" class="btn bg-default"
                             onclick="history.back(-1);">返回</button>
                 </div>

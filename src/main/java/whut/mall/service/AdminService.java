@@ -9,6 +9,7 @@ import whut.mall.entity.User;
 import whut.mall.repository.AdminRepository;
 import whut.mall.repository.ProductRepository;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -33,7 +34,7 @@ public class AdminService {
 
     }
 
-    public PageInfo<Product> findAllByPage(int currentPage, int size, String productName) {
+    public PageInfo<Product> findAllByPage(Integer currentPage, int size, String productName) {
 
 
         PageInfo<Product> pageInfo = new PageInfo<>();
@@ -43,7 +44,7 @@ public class AdminService {
         pageInfo.setSize(size);
 
         // 指定总数据量
-        int totalCount =productRepository.getTotal(productName);
+        int totalCount = productRepository.getTotal(productName);
 
         System.out.println(totalCount);
 
@@ -78,5 +79,19 @@ public class AdminService {
     public Product findProductById(Long id) {
         return productRepository.findProductById(id);
 
+    }
+
+    public int update(Long product_id, String product_name, String kind, BigDecimal price, String introduction) {
+        return productRepository.updateProduct(product_id,product_name,kind,price,introduction);
+
+    }
+
+    public void deleteProduct(Long id) {
+        productRepository.deleteById(id);
+    }
+
+    public void addProduct(String product_name, String kind, BigDecimal price, String introduction) {
+
+        productRepository.addProduct(product_name,kind,price,introduction);
     }
 }

@@ -13,6 +13,7 @@ import whut.mall.service.AdminService;
 import whut.mall.util.MD5Utils;
 
 import javax.servlet.http.HttpSession;
+import java.math.BigDecimal;
 
 /**
  * mall
@@ -56,8 +57,15 @@ public class AdminController {
 
     }
 
-    @GetMapping("/findAllProduct")
-    public String findAllProduct(@RequestParam(defaultValue = "1") int currentPage, @RequestParam(defaultValue = "0") int flag, String productName, HttpSession session, Model model) {
+    @GetMapping(value = {"/findAllProduct/{currentPage}","/findAllProduct"})
+    public String findAllProduct(@PathVariable(name = "currentPage",required = false) Integer currentPage, @RequestParam(defaultValue = "0") int flag, String productName, HttpSession session, Model model) {
+
+        System.err.println(currentPage);
+        if (currentPage==null){
+            currentPage=1;
+        }
+
+
         if (flag == 1) {
             System.out.println("条件查询");
             session.setAttribute("keywords", productName);
@@ -79,17 +87,15 @@ public class AdminController {
     public String findPurchaseHistory() {
 
 
+
         return "admin/purchaseHistory";
     }
 
 
-
-
     @GetMapping("/{id}/toUpdate.do")
-    public String toUpdate(@PathVariable Long id,Model model) {
+    public String toUpdate(@PathVariable Long id, Model model) {
         Product product = adminService.findProductById(id);
-        model.addAttribute("product",product);
-
+        model.addAttribute("product", product);
 
 
         return "admin/product-update";
@@ -97,8 +103,10 @@ public class AdminController {
     }
 
     @PostMapping("/update.do")
-    public String update(){
+    public String update(Long product_id, String product_name, String kind, BigDecimal price,String introduction) {
 
+        int flag=adminService.update(product_id,product_name,kind,price,introduction);
+        System.out.println(flag);
 
 
 
@@ -106,24 +114,31 @@ public class AdminController {
 
     }
 
+    @GetMapping("/{id}/delete")
+    public String deleteProduct(@PathVariable Long id){
+        adminService.deleteProduct(id);
+
+
+
+        return "redirect:/admin/findAllProduct";
+    }
+
+    @RequestMapping("/add")
+    public String addProduct(){
+
+        return "admin/addProduct";
+    }
+
+    @RequestMapping("/add.do")
+    public String addProductDo(String product_name, String kind, BigDecimal price,String introduction){
+        adminService.addProduct(product_name,kind,price,introduction);
 
 
 
 
+        return "redirect:findAllProduct";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 
 

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import whut.mall.entity.Cart;
 import whut.mall.entity.Product;
 import whut.mall.entity.User;
-import whut.mall.repositiry.CartRepository;
+import whut.mall.repository.CartRepository;
 import whut.mall.service.CartService;
 
 import javax.persistence.criteria.*;

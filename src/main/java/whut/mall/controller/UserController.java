@@ -34,7 +34,7 @@ public class UserController {
     @PostMapping("/login")
     //从前端得到用户名和密码
     public String login(String username, String password, HttpSession session, RedirectAttributes redirectAttributes) {
-        System.out.println(username+"  ---   "+password);
+        System.out.println(username+"---"+password);
         //与加密后的密码相比较
         User user = userService.checkUser(username, MD5Utils.code(password));
         if (user != null) {

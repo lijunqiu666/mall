@@ -33,7 +33,7 @@ public class User {
 
 
     //用户和订单之间的关系
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user")
     private List<Order> orderList = new ArrayList<>();
 
     public User() {

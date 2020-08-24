@@ -30,7 +30,7 @@ public class CartTest {
         User user=new User();
         user.setId((long) 1);
         Product product=new Product();
-        product.setProduct_id(1);
+        product.setProduct_id((long) 1);
         cartService.addCart(user,product,10);
     }
     @Test

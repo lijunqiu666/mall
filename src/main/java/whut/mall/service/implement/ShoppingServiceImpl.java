@@ -45,8 +45,8 @@ public class ShoppingServiceImpl implements ShoppingService {
         Product product=productRespositiry.getOne(ProId);
         order_item.setProduct(product);
         orderItemRepository.save(order_item);
-        BigDecimal pay= order.getPay().add(BigDecimal.valueOf(product.getPrice()*quantity));//不可直接加
-        order.setPay(pay);
+//        BigDecimal pay= order.getPay().add(BigDecimal.valueOf(product.getPrice()*quantity));//不可直接加
+//        order.setPay(pay);
         orderRepository.save(order);//更新order
         return order_item;
     }

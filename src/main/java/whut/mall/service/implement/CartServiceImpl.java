@@ -52,7 +52,6 @@ public class CartServiceImpl implements CartService {
             public Predicate toPredicate(Root root, CriteriaQuery criteriaQuery, CriteriaBuilder criteriaBuilder) {
                 Join join = root.join("user");
                 return criteriaBuilder.equal(join.get("id"), user.getId());
-
             }
         },pageable);
     }

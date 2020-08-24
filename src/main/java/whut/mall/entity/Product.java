@@ -135,20 +135,21 @@ public class Product {
         this.comments = comments;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "product_id=" + product_id +
-                ", product_name='" + product_name + '\'' +
-                ", price=" + price +
-                ", status=" + status +
-                ", image='" + image + '\'' +
-                ", introduction='" + introduction + '\'' +
-                ", kind='" + kind + '\'' +
-                ", shops=" + shops +
-                ", users=" + users +
-                ", colour=" + colour +
-                ", comments=" + comments +
-                '}';
-    }
+    //不覆盖会出现问题
+//    @Override
+//    public String toString() {
+//        return "Product{" +
+//                "product_id=" + product_id +
+//                ", product_name='" + product_name + '\'' +
+//                ", price=" + price +
+//                ", status=" + status +
+//                ", image='" + image + '\'' +
+//                ", introduction='" + introduction + '\'' +
+//                ", kind='" + kind + '\'' +
+//                ", shops=" + shops +
+//                ", users=" + users +
+//                ", colour=" + colour +
+//                ", comments=" + comments +
+//                '}';
+//    }
 }

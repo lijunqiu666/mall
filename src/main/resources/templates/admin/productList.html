@@ -115,7 +115,7 @@
                         <form action="/admin/findAllProduct?flag=1" method="post">
                             <div class="col-md-3 data">
                                 <input type="text" class="form-control input-sm" placeholder="产品名" name="productName"
-                                       value="${sessionScope.keywords}">
+                                       th:value="${session.keywords}">
                             </div>
                             <button type="submit" class="btn bg-maroon">搜索</button>
 
@@ -143,24 +143,26 @@
                             <!--                            <%&#45;&#45; 需要对 后台传递的 list集合进行遍历展示 &#45;&#45;%>-->
                             <!--                            <%&#45;&#45; c:foreach 遍历标签&#45;&#45;%>-->
 
-                                <tr th:each="product:${pageInfo.list}">
-                                    <td><input name="ids" type="checkbox"></td>
-                                    <td th:text="${product.product_id}"></td>
-                                    <td th:text="${product.kind}"></td>
-                                    <td th:text="${product.price}"></td>
-                                    <td th:text="${product.introduction}"></td>
-                                    <td th:text="${product.image}"></td>
-                                    <td class="text-center">
-                                        <button type="button" class="btn bg-olive btn-xs">详情</button>
-                                        <a th:href="@{/admin/{id}/toUpdate.do(id=${product.product_id})}"
-                                           class="btn bg-olive btn-xs">编辑</a>
-                                        <a th:href="@{/admin/{id}/delete(id=${product.product_id})}"
-                                           class="btn bg-olive btn-xs">删除</a>
+                            <tr th:each="product:${pageInfo.list}">
+                                <td><input name="ids" type="checkbox"></td>
+                                <td th:text="${product.product_id}"></td>
+                                <td th:text="${product.product_name}"></td>
+                                <td th:text="${product.kind}"></td>
+                                <td th:text="${product.price}"></td>
+                                <td th:text="${product.introduction}"></td>
+                                <td th:text="${product.image}"></td>
+
+                                <td class="text-center">
+                                    <a th:href="@{/admin/add}"
+                                       class="btn bg-olive btn-xs">增加</a>
+                                    <a th:href="@{/admin/{id}/toUpdate.do(id=${product.product_id})}"
+                                       class="btn bg-olive btn-xs">编辑</a>
+                                    <a th:href="@{/admin/{id}/delete(id=${product.product_id})}"
+                                       class="btn bg-olive btn-xs">删除</a>
 
 
-                                    </td>
-                                </tr>
-
+                                </td>
+                            </tr>
 
 
                             </tbody>
@@ -179,7 +181,11 @@
                 <div class="box-footer">
                     <div class="pull-left">
                         <div class="form-group form-inline">
-                            总共${pageInfo.totalPage} 页，共${pageInfo.totalCount} 条数据。 每页
+                            总共
+                            <div th:text="${pageInfo.totalPage}"></div>
+                            页，共
+                            <div th:text="${pageInfo.totalCount}"></div>
+                            条数据。 每页
                             <select class="form-control">
                                 <option>1</option>
                                 <option>2</option>
@@ -193,24 +199,27 @@
                     <div class="box-tools pull-right">
                         <ul class="pagination">
                             <li>
-                                <a href="${pageContext.request.contextPath}/users/findAll02.do?currentPage=1"
+                                <a th:href="@{/admin/findAllProduct/{currentPage}(currentPage=1)}"
                                    aria-label="Previous">首页</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/users/findAll02.do?currentPage=${pageInfo.currentPage - 1}">上一页</a>
+                                <!--                                <a href="${pageContext.request.contextPath}/users/findAll02.do?currentPage=${pageInfo.currentPage - 1}">上一页</a>-->
+                                <a th:href="@{/admin/findAllProduct/{currentPage}(currentPage=${(pageInfo.currentPage)-1})}">上一页</a>
                             </li>
 
-                            <c:forEach begin="1" end="${pageInfo.totalPage}" var="pageNum">
-                                <li>
-                                    <a href="${pageContext.request.contextPath}/users/findAll02.do?currentPage=${pageNum}">${pageNum}</a>
-                                </li>
-                            </c:forEach>
+<!--                            <div th:each="pageNum : ${pageInfo.totalPage}">-->
+<!--                               -->
+<!--                                <li>-->
+<!--                                    <a th:href="@{/admin/findAllProduct/{currentPage}(currentPage=pageNum)}">${pageNum}</a>-->
+<!--                                </li>-->
+<!--                            </div>-->
+
 
                             <li>
-                                <a href="${pageContext.request.contextPath}/users/findAll02.do?currentPage=${pageInfo.currentPage + 1}">下一页</a>
+                                <a th:href="@{/admin/findAllProduct/{currentPage}(currentPage=${(pageInfo.currentPage)+1})}">下一页</a>
                             </li>
                             <li>
-                                <a href="${pageContext.request.contextPath}/users/findAll02.do?currentPage=${pageInfo.totalPage}"
+                                <a th:href="@{/admin/findAllProduct/{currentPage}(currentPage=${pageInfo.totalPage})}"
                                    aria-label="Next">尾页</a>
                             </li>
                         </ul>

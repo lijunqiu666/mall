@@ -2,8 +2,7 @@ package whut.mall.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import whut.mall.entity.Admin;
-import whut.mall.entity.Product;
+import whut.mall.entity.*;
 
 import java.util.List;
 
@@ -16,12 +15,14 @@ import java.util.List;
 
 public interface AdminRepository extends JpaRepository<Admin, Long> {
 
-    @Query("select a from Admin a where a.adminname=?1 and a.password=?2")
+    @Query(nativeQuery = true, value = "select * from admin where adminname=?1 and password=?2")
     Admin findByAdminnameAndPassword(String username, String password);
 
 
 
-
-
-
+    //查询后买记录
+    @Query(nativeQuery = true, value = "select t_order.user_id,pay,order_time,\n" +
+            "orderitem.quantity,orderitem.product_product_id,orderitem.order_id,orderitem.id from t_order,orderitem\n" +
+            "where orderitem.order_id=t_order.id")
+    PurchaseHistory findallHistory();
 }

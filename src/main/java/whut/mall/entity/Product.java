@@ -3,6 +3,7 @@ package whut.mall.entity;
 
 import javax.persistence.*;
 import java.lang.reflect.Type;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +12,9 @@ import java.util.List;
 public class Product {
     @Id
     @GeneratedValue
-    private long product_id;
+    private Long product_id;
     private String product_name;  //产品名称
-    private Double price;           //产品价格
+    private BigDecimal price;           //产品价格
     private Boolean status;       //产品审核状态
     private String image;         //产品配图
     private String introduction;  //产品简介
@@ -38,11 +39,11 @@ public class Product {
     public Product() {
     }
 
-    public long getProduct_id() {
+    public Long getProduct_id() {
         return product_id;
     }
 
-    public void setProduct_id(long product_id) {
+    public void setProduct_id(Long product_id) {
         this.product_id = product_id;
     }
 
@@ -54,11 +55,11 @@ public class Product {
         this.product_name = product_name;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -134,21 +135,21 @@ public class Product {
         this.comments = comments;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "product_id=" + product_id +
-                ", product_name='" + product_name + '\'' +
-                ", price=" + price +
-                ", status=" + status +
-                ", image='" + image + '\'' +
-                ", introduction='" + introduction + '\'' +
-                ", kind='" + kind + '\'' +
-                ", shops=" + shops +
-                ", stock=" + stock +
-                ", users=" + users +
-                ", colour=" + colour +
-                ", comments=" + comments +
-                '}';
-    }
+    //不覆盖会出现问题
+//    @Override
+//    public String toString() {
+//        return "Product{" +
+//                "product_id=" + product_id +
+//                ", product_name='" + product_name + '\'' +
+//                ", price=" + price +
+//                ", status=" + status +
+//                ", image='" + image + '\'' +
+//                ", introduction='" + introduction + '\'' +
+//                ", kind='" + kind + '\'' +
+//                ", shops=" + shops +
+//                ", users=" + users +
+//                ", colour=" + colour +
+//                ", comments=" + comments +
+//                '}';
+//    }
 }

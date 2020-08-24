@@ -1,9 +1,17 @@
+/*轮换层大小*/
+
+#myCarousel {
+	width: 100%;
+}
+
 /*accordion是左侧导航条*/
+
 #accordion {
 	min-height: 300px;
 }
 
 /*左右两侧的阴影效果*/
+
 .carousel-control.left {
 	background-image: none;
 	background-color: #666666;

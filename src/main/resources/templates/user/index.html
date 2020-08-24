@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8"/>
     <title>军训必需品平台</title>
@@ -27,14 +27,35 @@
 <div class="clearfix"></div>
 <hr/>
 <!--推荐栏目-->
-<div class="col-md-offset-1 col-md-5">
+<div class="col-md-offset-1 col-md-10">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">新到好货</h3>
         </div>
         <div id="newList" class="panel-body panel-item">
 
-<!--            产生五个来填充-->
+            <table class="ui celled table">
+                <tbody>
+                <tr th:each="t??????,iterStat : ${page.content}">
+                    <td th:text="${iterStat.count}"  class="col-md-7 text-row-2">1</td>
+                    <td th:text="${type.name}" class="col-md-2">刻意练习清单</td>
+                    <td class="col-md-3">
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="6">
+                        <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
+                            <a  class="item" th:href="@{/admin/types(page=${page.number}-1)}" th:unless="${page.first}">上一页</a>
+                            <a  class="item" th:href="@{/admin/types(page=${page.number}+1)}" th:unless="${page.last}">下一页</a>
+                        </div>
+                        <a href="#"  th:href="@{/admin/types/input}" class="ui mini right floated teal basic button">新增</a>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+
             <div class="col-md-12">
                 <div class="col-md-7 text-row-2"><a href="product.html">现摘正宗新疆库勒尔香梨，10斤整箱包邮特产</a></div>
                 <div class="col-md-2">¥69.8</div>
@@ -46,26 +67,6 @@
 
         </div>
 
-    </div>
-
-</div>
-<div class="col-md-5">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">热销排行</h3>
-        </div>
-        <div id="hotList" class="panel-body panel-item">
-
-            <div class="col-md-12">
-                <div class="col-md-7 text-row-2"><a href="product.html">美国进口车厘子带箱3斤大樱桃 新鲜当季水果应季批发</a></div>
-                <div class="col-md-2">¥89..8</div>
-                <div class="col-md-3"><img src="../../static/images/portal/00GuangBo1040A5GBR0731/collect.png" width="100%"/>
-                </div>
-            </div>
-
-
-
-        </div>
     </div>
 
 </div>

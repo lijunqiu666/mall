@@ -21,5 +21,5 @@ public interface CartService {
     int addCount(Long id);
 
     int deleteCount(Long id);
-
+    public int deleteCart(Long id);
 }

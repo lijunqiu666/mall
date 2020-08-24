@@ -65,8 +65,15 @@ public class CartController {
 
 
     @GetMapping("/reduce_count")
-    public int reduceCount(@RequestParam("id") Long id) {//返回状态码？
+    public int reduceCount(@RequestParam("id") Long id) {
         return cartService.deleteCount(id);
 
     }
+
+    @GetMapping("/delete")
+    public int deleteCart(Long id)//参数为Cart的id
+    {
+        return cartService.deleteCart(id);
+    }
+
 }

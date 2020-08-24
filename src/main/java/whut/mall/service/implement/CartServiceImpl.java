@@ -9,7 +9,10 @@ import whut.mall.entity.Cart;
 import whut.mall.entity.Product;
 import whut.mall.entity.User;
 import whut.mall.repository.CartRepository;
+import whut.mall.repository.ProductRepository;
+import whut.mall.repository.ProductRespositiry;
 import whut.mall.service.CartService;
+import whut.mall.service.ProductService;
 
 import javax.persistence.criteria.*;
 import java.util.Date;
@@ -26,10 +29,15 @@ public class CartServiceImpl implements CartService {
     @Autowired
     CartRepository cartRepository;
 
-    public int addCart(User user, Product product, int quantity) {
+    @Autowired
+    ProductService productService;
+
+    @Override
+    public int addCart(User user, Long id, int quantity) {
         //是否需要先查询User而构建完整的user呢？
         //将cart对象设置完整
         //插入即可
+       Product product= productService.getProductByID(id);
        Cart c= cartRepository.getOneByUserAndProduct(user,product);
        if(c!=null)
            return addCount(c.getId());

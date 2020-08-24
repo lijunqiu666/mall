@@ -38,7 +38,7 @@
                 <tbody>
                 <tr th:each="product:${page.content}">
                     <td th:text="${product.image}" class="col-md-7 text-row-2"></td>
-                    <a href="#" th:href="@{/admin/news/{id}/toUpdate(id=${news.id})}" ><td th:text="${product.product_name}" class="col-md-2"></td></a>
+                    <a href="#" th:href="@{/cart/add_to_cart.do(id=${news.id})}" ><td th:text="${product.product_name}" class="col-md-2"></td></a>
                     <td th:text="${product.price}"></td>
                     </td>
                 </tr>

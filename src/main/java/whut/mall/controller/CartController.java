@@ -27,7 +27,7 @@ public class CartController {
     CartServiceImpl cartService;
 
 
-    @PostMapping("/add_to_cart.do")
+    @PostMapping("/add_to_cart.do/{id}")
     @ResponseBody//反回的是数据
     /*
      *@author liaowenhua
@@ -36,12 +36,9 @@ public class CartController {
      *@Param [s, product：产品, quantity： 数量]
      *@Return
      **/
-    public String addToCard(HttpSession s, Product product, int quantity)//不用全部字段输全，部分字段即可，实在不行传给我相关实体类的id就可以
-    // 不知道能不能得到
+    public String addToCard(HttpSession s,@PathVariable(name = "id") Long id, int quantity)
     {
-//看你的前端是要返回一个状态码吗，是一个对应的数据就好吗，不用命名什么的，要什么规则吗
-    int i=cartService.addCart((User)s.getAttribute("user"),product,quantity);
-//你要我返回啥
+    int i=cartService.addCart((User)s.getAttribute("user"),id,quantity);
     return "添加成功";}
 
     /*

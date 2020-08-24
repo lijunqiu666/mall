@@ -39,7 +39,6 @@ public class ProductController {
     // 跳转到user的index
     @GetMapping("/Product2")
     public String Product2(@PageableDefault(size = 3) Pageable pageable, Model model) {
-        // 不仅需要查询当前页的数据  还需要查询全部的类别
         model.addAttribute("stocks", stockService.listStock());
         model.addAttribute("page", productService.listProduct(pageable));
         return "user/index";

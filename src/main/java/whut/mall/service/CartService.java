@@ -14,7 +14,7 @@ import whut.mall.entity.User;
  * Date 2020/8/22 21:53
  **/
 public interface CartService {
-    int addCart(User user, Product product, int quantity);
+    int addCart(User user,Long id, int quantity);
 
     Page<Cart> listCart(Pageable pageable, User user);
 

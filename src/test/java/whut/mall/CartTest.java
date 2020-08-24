@@ -31,7 +31,7 @@ public class CartTest {
         user.setId((long) 1);
         Product product=new Product();
         product.setProduct_id((long) 1);
-        cartService.addCart(user,product,10);
+//        cartService.addCart(user,product,10);
     }
     @Test
     void listCartTest()

@@ -2,7 +2,6 @@ package whut.mall.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,6 +36,15 @@ public class ProductController {
         return "admin/Product";
     }
 
+    // 跳转到user的index
+    @GetMapping("/Product2")
+    public String Product2(@PageableDefault(size = 3) Pageable pageable, Model model) {
+        // 不仅需要查询当前页的数据  还需要查询全部的类别
+        model.addAttribute("stocks", stockService.listStock());
+        model.addAttribute("page", productService.listProduct(pageable));
+        return "user/index";
+    }
+
     // 新增的前置操作
     @GetMapping("/news/input")
     public String toAdd(Model model) {
@@ -51,13 +59,9 @@ public class ProductController {
     public String addOrUpdate(Product product, HttpSession session, RedirectAttributes attributes) {
 
         // 得到Stock对象 , 将Stock对象存储到对象中，    因为前台传递的Type对象中只有一个id  所以需要通过id找到整个type对象  再进行存储
-
-
         //有问题
 //        product.setStock(stockService.getStockByID(product.getStock().getId()));
         System.out.println(product);
-
-
         Product n;
         // 判断当前是新增或是更新
         if (product.getProduct_id() == 0) {

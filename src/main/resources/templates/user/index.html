@@ -36,12 +36,13 @@
 
             <table class="ui celled table">
                 <tbody>
-                <tr th:each="t??????,iterStat : ${page.content}">
-                    <td th:text="${iterStat.count}"  class="col-md-7 text-row-2">1</td>
-                    <td th:text="${type.name}" class="col-md-2">刻意练习清单</td>
-                    <td class="col-md-3">
+                <tr th:each="product:${page.content}">
+                    <td th:text="${product.image}" class="col-md-7 text-row-2"></td>
+                    <a href="#" th:href="@{/admin/news/{id}/toUpdate(id=${news.id})}" ><td th:text="${product.product_name}" class="col-md-2"></td></a>
+                    <td th:text="${product.price}"></td>
                     </td>
                 </tr>
+
                 </tbody>
                 <tfoot>
                 <tr>
@@ -55,15 +56,6 @@
                 </tr>
                 </tfoot>
             </table>
-
-            <div class="col-md-12">
-                <div class="col-md-7 text-row-2"><a href="product.html">现摘正宗新疆库勒尔香梨，10斤整箱包邮特产</a></div>
-                <div class="col-md-2">¥69.8</div>
-                <div class="col-md-3"><img src="../../static/images/portal/02COMIXC5902A5122blue/collect.png" width="100%"/>
-                </div>
-            </div>
-
-
 
         </div>
 
@@ -90,7 +82,7 @@
 <script>
     $(document).ready(function () {
         //这里和下面的是出现一些产品的接口
-        var url = "../../new_list";
+        var url = "/admin/Product";
         // 发送ajax请求，并处理请求
         $.ajax({
             "url": url,
@@ -99,62 +91,10 @@
             "dataType": "json",
             "success": function (json) {
                 if (json.state == 200) {
-                    $("#newList").empty();
-                    var list = json.data;
-                    for (var i = 0; i < list.length; i++) {
-                        console.log(list[i].image + "-" + list[i].title);
-                        var html = '<div class="col-md-12">' +
-                            '<div class="col-md-7 text-row-2"><a href="product.html?id=#{id}">#{title}</a></div>' +
-                            '<div class="col-md-2">¥#{price}</div>' +
-                            '<div class="col-md-3"><img src="../../../..#{image}collect.png" width="100%" /></div>' +
-                            '</div>';
-
-                        html = html.replace(/#{id}/g, list[i].id);
-                        html = html.replace(/#{image}/g, list[i].image);
-                        html = html.replace(/#{price}/g, list[i].price);
-                        html = html.replace(/#{title}/g, list[i].title);
-                        $("#newList").append(html);
-                    }
                 } else {
                     alert(json.message);
                 }
             }
-
-        });
-        var url = "../../hot_list";
-        // 发送ajax请求，并处理请求
-        $.ajax({
-            "url": url,
-            "type": "POST",
-            "data": {},
-            "dataType": "json",
-            "success": function (json) {
-                if (json.state == 200) {
-                    $("#hotList").empty();
-                    var list = json.data;
-                    for (var i = 0; i < list.length; i++) {
-                        console.log(list[i].image + "-" + list[i].title);
-                        var html = '<div class="col-md-12">' +
-                            '<div class="col-md-7 text-row-2"><a href="product.html?id=#{id}">#{title}</a></div>' +
-                            '<div class="col-md-2">¥#{price}</div>' +
-                            '<div class="col-md-3"><img src="../../../..#{image}collect.png" width="100%" /></div>' +
-                            '</div>';
-
-                        html = html.replace(/#{id}/g, list[i].id);
-                        html = html.replace(/#{image}/g, list[i].image);
-                        html = html.replace(/#{price}/g, list[i].price);
-                        html = html.replace(/#{title}/g, list[i].title);
-                        $("#hotList").append(html);
-                    }
-                } else {
-                    alert(json.message);
-                }
-            }
-            // ,
-            // "error": function (xhr, text, errorThrown) {
-            //     alert("您登陆的信息已经过期!请重新登录!");
-            //     location.href = "login.html";
-            // }
         });
     });
 </script>

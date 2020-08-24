@@ -62,7 +62,6 @@ public class AdminController {
             currentPage = 1;
         }
 
-
         if (flag == 1) {
             System.out.println("条件查询");
             session.setAttribute("keywords", productName);
@@ -74,7 +73,6 @@ public class AdminController {
         PageInfo<Product> pageInfo = adminService.findAllByPage(currentPage, size, productName);
         System.out.println(pageInfo);
         model.addAttribute("pageInfo", pageInfo);
-
 
         return "admin/productList";
     }

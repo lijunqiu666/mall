@@ -17,24 +17,25 @@ import whut.mall.entity.Stock;
 import whut.mall.service.StockService;
 
 @Controller
-@RequestMapping("/后台功能")
+@RequestMapping("/stock")
 public class StockController {
     @Autowired
     StockService stockService;
 
-    @GetMapping("/前端分类页面请求路径")
+    @GetMapping("/list")
     public String StockController() {
-        return "前端页面";
+        return "";
     }
 
-    @GetMapping("/路径")
+    @GetMapping("/stocks")
     public String stocks(@PageableDefault(size = 5,sort = {"id"},direction = Sort.Direction.DESC) Pageable pageable,
                          Model model){
         //pageable 前端封装分页对象 内部存放相关分页数据
         //查询所有分类对象
        Page<Stock> page = stockService.listStock(pageable);
+       model.addAttribute("types", stockService.listStock());
        model.addAttribute("Page",page);
-       return "前端分类页面";
+       return "/stocks";
     }
 
     @GetMapping("/前端增加分类请求路径")

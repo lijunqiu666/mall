@@ -40,7 +40,8 @@ public class UserController {
         if (user != null) {
             user.setPassword(null);
             session.setAttribute("user", user);
-            return "user/index";
+
+            return "redirect:/admin/Product2";
         } else {
             // 重定向之后返回数据
             redirectAttributes.addFlashAttribute("message", "用户名或者密码错误");
@@ -48,8 +49,6 @@ public class UserController {
             //重定向请求
             return "redirect:/user";
         }
-
-
     }
 
     @PostMapping("/register")

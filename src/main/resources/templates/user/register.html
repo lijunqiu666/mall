@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>军训必需品平台</title>
+    <!--导入核心文件-->
+    <script src="../../static/bootstrap3/js/holder.js"></script>
+    <link href="../../static/bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../static/bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../../static/bootstrap3/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/reg.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/footer.css"/>
+</head>
+
+<body>
+<!--头部-->
+<div id="headPage"></div>
+
+<!--主体-->
+<div class="container mycontent text-left">
+    <!--透明层 -->
+    <div class="regDiv">
+        <h4>新用户注册</h4>
+        <hr/>
+        <!--表单开始-->
+        <form id="form-reg" class="form-horizontal" role="form" method="post" action="/user/register">
+            <!--用户名-->
+            <div class="form-group">
+                <label class="col-md-3 control-label">名&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp字：</label>
+                <div class="col-md-8">
+                    <input name="username" type="text" class="form-control" placeholder="请输入用户名">
+                </div>
+            </div>
+            <!--密码-->
+            <div class="form-group">
+                <label class="col-md-3 control-label"> 密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</label>
+                <div class="col-md-8">
+                    <input id="password" name="password" type="password" class="form-control" placeholder="请输入密码">
+                </div>
+            </div>
+            <!--确认密码-->
+            <div class="form-group">
+                <label class="col-md-3 control-label"> 确认密码：</label>
+                <div class="col-md-8">
+                    <input id="repassword" type="password" class="form-control" placeholder="请再次输入密码">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">邮&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp箱：</label>
+                <div class="col-md-8">
+                    <input name="email" type="text" class="form-control" placeholder="请输入邮箱">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">电&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp话：</label>
+                <div class="col-md-8">
+                    <input name="phone" type="text" class="form-control" placeholder="请输入电话号码">
+                </div>
+            </div>
+
+            <!--提交按钮-->
+            <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-8">
+                    <input id="btn-reg" class="btn btn-primary" type="submit" value="立即注册"/>
+
+                    <span class="pull-right"><small>已经有账号？</small><a href="/user">登录</a></span>
+                </div>
+            </div>
+            <div class="ui error mini message"></div>
+            <!-- #strings内置对象   -->
+            <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">111</div>
+
+        </form>
+    </div>
+
+</div>
+
+<!-- 页脚 -->
+<div id="footerPage"></div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        //加载页首页面
+        $("#headPage").load("../template/headTemplate.html");
+        //加载页脚页面
+        $("#footerPage").load("../template/footerTemplate.html");
+    });
+
+
+    // 为注册按钮绑定单击事件
+    // $("#btn-reg").click(function () {
+    //     var url = "../../../user/register";
+    //     // 将前端数据封装到data中
+    //     var data = $("#form-reg").serialize();
+    //     console.log("注册参数：" + data);
+    //     $.ajax({
+    //         "url": url,
+    //         "data": data,
+    //         "type": "POST",
+    //         "dataType": "json",
+    //         "success": function (json) {
+    //             // alert(json.state);
+    //             if (json.state == 200) {
+    //                 alert("注册成功!");
+    //                 location.href = "login.html";
+    //             } else {
+    //                 alert(json.message);
+    //             }
+    //         }
+    //     });
+    // });
+
+</script>
+</body>
+
+</html>

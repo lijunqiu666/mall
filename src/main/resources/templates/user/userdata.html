@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--edge浏览器H5兼容设置-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--360浏览器H5兼容设置-->
+		<meta name="renderer" content="webkit" />
+		<title>军训必需品平台</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--导入核心文件-->
+		<script src="../../static/bootstrap3/js/holder.js"></script>
+		<link href="../../static/bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<script src="../../static/bootstrap3/jquery-1.9.1.min.js"></script>
+		<script src="../../static/bootstrap3/js/bootstrap.js"></script>
+		<!-- 字体图标 -->
+		<link rel="stylesheet" href="../../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/css/top.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/css/footer.css" />
+	</head>
+
+	<body>
+
+	<!--头部-->
+	<div id="headPage"></div>
+
+
+		<div class="container">
+			<div class="col-md-2">
+				<!--左侧导航开始-->
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<!--主选项：我的订单-->
+							<p class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">我的订单</a>
+							</p>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div><a href="orders.html">全部订单</a></div>
+								<div><a href="orders.html">待付款</a></div>
+								<div><a href="orders.html">待收货</a></div>
+								<div><a href="orders.html">待评价</a></div>
+								<div><a href="orders.html">退货退款</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<!--主选项：资料修改-->
+							<p class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">资料修改</a>
+							</p>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div><a href="password.html">修改密码</a></div>
+								<div><a href="userdata.html"><b>个人资料</b></a></div>
+								<div><a href="upload.html">上传头像</a></div>
+								<div><a href="address.html">收货管理</a></div>
+								<!--<div><a href="../business/addRent.html">租赁管理</a></div>
+								<div><a href="address.html">产品管理</a></div>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--左侧导航结束-->
+			</div>
+			<div class="col-md-10	">
+				<div class="panel panel-default">
+					<ul class="nav nav-tabs">
+						<li><a href="password.html">修改密码</a></li>
+						<li class="active"><a href="#">个人资料</a></li>
+						<li><a href="upload.html">上传头像</a></li>
+						<li><a href="address.html">收货管理</a></li>
+						<!--<li><a href="../business/addRent.html">租赁管理</a></li>
+						<li><a href="address.html">产品管理</a></li>-->
+					</ul>
+					<div class="panel-body">
+						<!--修改资料表单开始-->
+						<form id="form-change-info" class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="col-md-2 control-label">用户名：</label>
+								<div class="col-md-8">
+									<input id="username" type="text" class="form-control" value="孙悟空" readonly="readonly">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">电话号码：</label>
+								<div class="col-md-8">
+									<input id="phone" name="phone" type="text" class="form-control" placeholder="请输入电话号码" value="13311311313">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">电子邮箱：</label>
+								<div class="col-md-8">
+									<input id="email" name="email" type="text" class="form-control" placeholder="请输入电子邮箱" value="sunwk@qq.com">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">性别：</label>
+								<div class="col-md-8">
+									<label class="radio-inline">
+										<input id="gender-male" type="radio" name="gender" value="1" checked="checked">男
+									</label>
+									<label class="radio-inline">
+										<input id="gender-female" type="radio" name="gender" value="0">女
+									</label>
+                                </div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<input id="btn-change" type="button" class="btn btn-primary" value="修改" />
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- 页脚 -->
+	<div id="footerPage"></div>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			//加载页首页面
+			$("#headPage").load("../template/topTemplate.html");
+			//加载页脚页面
+			$("#footerPage").load("../template/footerTemplate.html");
+
+			// 加载当前用户的收货地址列表
+			showList();
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// 初始化数据
+			var url = "../../user/info.do";
+			$.ajax({
+				"url" : url,
+				"type" : "POST",
+				"dataType" : "json",
+				"success" : function (json) {
+					var user = json.data;
+					$("#username").val(user.username);
+					$("#phone").val(user.phone);
+					$("#email").val(user.email);
+					if (user.gender === 0) {
+						$("#gender-female").attr("checked","checked");
+					}
+					if (user.gender === 1){
+						$("#gender-male").attr("checked","checked");
+					}
+
+				}
+			});
+		});
+
+		// 为修改按钮添加点击事件
+		$("#btn-change").click(function () {
+			var url = "../../user/change_info.do";
+			// 请求参数
+			var data = $("#form-change-info").serialize();// 根据name取值
+			console.log("修改个人资料参数：" + data);
+			// 发送ajax请求，并处理请求
+			$.ajax({
+				"url":url,
+				"data":data,
+				"type":"POST",
+				"dataType":"json",
+				"success":function(json) {
+					if (json.state === 200) {
+						alert("修改成功！");
+					} else {
+						alert(json.message);
+					}
+				}
+				// ,
+				// "error":function(xhr,text, errorThrown) {
+				// 	alert("您登陆的信息已经过期!请重新登录!");
+				// 	location.href = "login.html";
+				// }
+			});
+		});
+
+
+
+	</script>
+	</body>
+
+</html>

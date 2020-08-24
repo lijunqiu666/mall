@@ -1752,3 +1752,277 @@ Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyT
 2020-08-23 23:18:12.387  INFO 13900 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
 2020-08-23 23:18:14.354  INFO 13900 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
 2020-08-23 23:18:14.435  INFO 13900 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 21.505 seconds (JVM running for 28.048)
+2020-08-24 08:44:20.958  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on PC-2019052701 with PID 3080 (D:\IntelliJ IDEA 2020.1\mall\target\classes started by PC in D:\IntelliJ IDEA 2020.1\mall)
+2020-08-24 08:44:20.961  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-24 08:44:21.038  INFO 3080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-24 08:44:21.040  INFO 3080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-24 08:44:21.783  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-24 08:44:21.873  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78ms. Found 5 JPA repository interfaces.
+2020-08-24 08:44:22.605  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-24 08:44:22.617  INFO 3080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-24 08:44:22.617  INFO 3080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-24 08:44:22.718  INFO 3080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-24 08:44:22.719  INFO 3080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1678 ms
+2020-08-24 08:44:22.921  INFO 3080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:44:22.963  INFO 3080 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-24 08:44:23.024  INFO 3080 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-08-24 08:44:23.203  WARN 3080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-24 08:44:23.218  INFO 3080 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-24 08:44:23.478  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-24 08:44:23.487  WARN 3080 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-24 08:44:23.609  INFO 3080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-24 08:44:23.661  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-24 08:44:23.661  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-24 08:44:23.663  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories¡­
+2020-08-24 08:44:23.686  INFO 3080 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-08-24 08:44:24.667  INFO 3080 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-24 08:44:24.675  INFO 3080 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:44:25.140  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-24 08:44:25.150  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 4.727 seconds (JVM running for 6.663)
+2020-08-24 08:45:39.295  INFO 3080 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-24 08:45:39.295  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-24 08:45:39.302  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-24 08:45:39.948  WARN 3080 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-24 08:45:39.949  WARN 3080 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:45:39.992  WARN 3080 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2020-08-24 08:45:43.693  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /tamplates/user/login.html
+2020-08-24 08:45:43.726  WARN 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:45:43.732  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:45:49.251  WARN 3080 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-08-24 08:45:50.184  WARN 3080 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-08-24 08:45:52.672  WARN 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:45:52.673  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:45:57.565  WARN 3080 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:45:57.567  WARN 3080 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:45:58.361  WARN 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:45:58.362  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:45:59.114  WARN 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:45:59.114  WARN 3080 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:46:17.719  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-24 08:46:17.723  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:48:55.083  INFO 3080 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:48:55.085  INFO 3080 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:48:55.087  INFO 3080 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-24 08:48:55.097  INFO 3080 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-24 08:48:55.365  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on PC-2019052701 with PID 3080 (D:\IntelliJ IDEA 2020.1\mall\target\classes started by PC in D:\IntelliJ IDEA 2020.1\mall)
+2020-08-24 08:48:55.366  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-24 08:48:55.552  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-24 08:48:55.581  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 5 JPA repository interfaces.
+2020-08-24 08:48:55.749  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-24 08:48:55.750  INFO 3080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-24 08:48:55.750  INFO 3080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-24 08:48:55.778  INFO 3080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-24 08:48:55.779  INFO 3080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 409 ms
+2020-08-24 08:48:55.825  INFO 3080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:48:55.833  INFO 3080 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-24 08:48:55.838  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-08-24 08:48:55.850  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-08-24 08:48:55.851  INFO 3080 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-08-24 08:48:55.929  WARN 3080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-24 08:48:56.003  WARN 3080 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-24 08:48:56.062  INFO 3080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-24 08:48:56.082  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-24 08:48:56.082  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories¡­
+2020-08-24 08:48:56.165  INFO 3080 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-24 08:48:56.166  INFO 3080 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:48:56.310  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-24 08:48:56.315  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 1.045 seconds (JVM running for 277.827)
+2020-08-24 08:48:56.316  INFO 3080 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-08-24 08:48:57.911  INFO 3080 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-24 08:48:57.911  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-24 08:48:57.919  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-24 08:48:57.965  WARN 3080 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:48:57.967  WARN 3080 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:49:01.695  WARN 3080 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-08-24 08:49:16.575  WARN 3080 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /tamplates/user/login.html
+2020-08-24 08:49:16.621  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:49:16.634  WARN 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:49:24.952  WARN 3080 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:49:24.954  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:49:32.444  WARN 3080 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /tamplates/user/login.html
+2020-08-24 08:49:32.476  WARN 3080 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:49:32.489  WARN 3080 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:50:01.898  WARN 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:50:01.900  WARN 3080 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:50:04.535  WARN 3080 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-08-24 08:50:30.218  INFO 3080 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:50:30.219  INFO 3080 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:50:30.220  INFO 3080 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-08-24 08:50:30.229  INFO 3080 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-08-24 08:50:30.462  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on PC-2019052701 with PID 3080 (D:\IntelliJ IDEA 2020.1\mall\target\classes started by PC in D:\IntelliJ IDEA 2020.1\mall)
+2020-08-24 08:50:30.462  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-24 08:50:30.649  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-24 08:50:30.681  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 5 JPA repository interfaces.
+2020-08-24 08:50:30.855  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-24 08:50:30.856  INFO 3080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-24 08:50:30.856  INFO 3080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-24 08:50:30.872  INFO 3080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-24 08:50:30.872  INFO 3080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 407 ms
+2020-08-24 08:50:30.919  INFO 3080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:50:30.928  INFO 3080 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-24 08:50:30.939  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-08-24 08:50:30.950  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-08-24 08:50:30.951  INFO 3080 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-08-24 08:50:31.066  WARN 3080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-24 08:50:31.140  WARN 3080 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-24 08:50:31.198  INFO 3080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-24 08:50:31.222  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-24 08:50:31.223  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories¡­
+2020-08-24 08:50:31.312  INFO 3080 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-24 08:50:31.312  INFO 3080 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:50:31.454  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-24 08:50:31.458  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 1.032 seconds (JVM running for 372.97)
+2020-08-24 08:50:31.460  INFO 3080 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-08-24 08:50:31.612  INFO 3080 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-24 08:50:31.612  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-24 08:50:31.614  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-08-24 08:51:29.326  INFO 3080 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:51:29.327  INFO 3080 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:51:29.327  INFO 3080 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-08-24 08:51:29.333  INFO 3080 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-08-24 08:51:29.596  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on PC-2019052701 with PID 3080 (D:\IntelliJ IDEA 2020.1\mall\target\classes started by PC in D:\IntelliJ IDEA 2020.1\mall)
+2020-08-24 08:51:29.597  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-24 08:51:29.905  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-24 08:51:29.952  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 5 JPA repository interfaces.
+2020-08-24 08:51:30.114  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-24 08:51:30.114  INFO 3080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-24 08:51:30.115  INFO 3080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-24 08:51:30.133  INFO 3080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-24 08:51:30.133  INFO 3080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 533 ms
+2020-08-24 08:51:30.176  INFO 3080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:51:30.183  INFO 3080 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-24 08:51:30.188  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-08-24 08:51:30.192  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-08-24 08:51:30.192  INFO 3080 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-08-24 08:51:30.270  WARN 3080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-24 08:51:30.312  WARN 3080 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-24 08:51:30.359  INFO 3080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-24 08:51:30.381  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-24 08:51:30.382  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories¡­
+2020-08-24 08:51:30.454  INFO 3080 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-24 08:51:30.455  INFO 3080 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:51:30.560  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-24 08:51:30.564  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 1.005 seconds (JVM running for 432.076)
+2020-08-24 08:51:30.565  INFO 3080 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-08-24 08:51:31.259  INFO 3080 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-24 08:51:31.260  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-24 08:51:31.266  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-08-24 08:51:31.305  WARN 3080 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:51:31.305  WARN 3080 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:51:34.206  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:51:34.206  WARN 3080 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-24 08:51:48.158  WARN 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:51:48.165  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:51:55.907  WARN 3080 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-24 08:51:55.908  WARN 3080 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:52:34.075  WARN 3080 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-24 08:52:34.077  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:52:54.213  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /template/headTemplate.html
+2020-08-24 08:52:54.247  WARN 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:52:54.256  WARN 3080 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:53:28.784  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:53:43.988  WARN 3080 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:53:43.990  WARN 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:54:11.154  WARN 3080 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:19.063  WARN 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:20.447  WARN 3080 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:21.489  WARN 3080 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:23.480  WARN 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:29.577  WARN 3080 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:54:29.579  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:54:34.209  WARN 3080 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:38.240  WARN 3080 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:39.905  WARN 3080 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:43.990  WARN 3080 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:45.232  WARN 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:45.898  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:46.740  WARN 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:47.713  WARN 3080 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:54:51.830  WARN 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /template/footerTemplate.html
+2020-08-24 08:56:44.157  INFO 3080 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:56:44.158  INFO 3080 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:56:44.158  INFO 3080 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-08-24 08:56:44.163  INFO 3080 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-08-24 08:56:44.439  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on PC-2019052701 with PID 3080 (D:\IntelliJ IDEA 2020.1\mall\target\classes started by PC in D:\IntelliJ IDEA 2020.1\mall)
+2020-08-24 08:56:44.439  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-24 08:56:44.624  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-24 08:56:44.644  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 5 JPA repository interfaces.
+2020-08-24 08:56:44.772  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-24 08:56:44.772  INFO 3080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-24 08:56:44.773  INFO 3080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-24 08:56:44.793  INFO 3080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-24 08:56:44.794  INFO 3080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 353 ms
+2020-08-24 08:56:44.842  INFO 3080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:56:44.853  INFO 3080 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-24 08:56:44.861  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-08-24 08:56:44.865  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-08-24 08:56:44.866  INFO 3080 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-08-24 08:56:44.958  WARN 3080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-24 08:56:45.022  WARN 3080 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-24 08:56:45.068  INFO 3080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-24 08:56:45.087  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-24 08:56:45.088  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories¡­
+2020-08-24 08:56:45.151  INFO 3080 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-24 08:56:45.152  INFO 3080 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:56:45.275  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-24 08:56:45.279  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 0.875 seconds (JVM running for 746.791)
+2020-08-24 08:56:45.280  INFO 3080 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-08-24 08:56:49.412  INFO 3080 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-24 08:56:49.414  INFO 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-24 08:56:49.420  INFO 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-08-24 08:56:49.470  WARN 3080 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:56:49.471  WARN 3080 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:56:51.149  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /templates/user/login.html
+2020-08-24 08:56:51.194  WARN 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:56:51.203  WARN 3080 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:57:01.976  WARN 3080 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:57:01.977  WARN 3080 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:57:05.598  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /templates/user/login.html
+2020-08-24 08:57:05.625  WARN 3080 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:57:05.634  WARN 3080 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:57:14.487  WARN 3080 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /template/user/login.html
+2020-08-24 08:57:14.520  WARN 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:57:14.530  WARN 3080 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:57:21.392  WARN 3080 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /templates/user/login.html
+2020-08-24 08:57:21.422  WARN 3080 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:57:21.422  WARN 3080 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:57:24.565  WARN 3080 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-08-24 08:57:31.919  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /templates/user/login.html
+2020-08-24 08:57:31.947  WARN 3080 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:57:31.954  WARN 3080 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:57:48.869  WARN 3080 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for POST /new_list
+2020-08-24 08:57:48.869  WARN 3080 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for POST /hot_list
+2020-08-24 08:57:56.572  WARN 3080 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /templates/user/login.html
+2020-08-24 08:57:56.609  WARN 3080 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /%E8%B5%84%E6%96%99/new/static/css/me.css
+2020-08-24 08:57:56.624  WARN 3080 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /images/wechat.jpg
+2020-08-24 08:59:01.676  INFO 3080 --- [Thread-24] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:59:01.677  INFO 3080 --- [Thread-24] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:59:01.677  INFO 3080 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2020-08-24 08:59:01.682  INFO 3080 --- [Thread-24] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2020-08-24 08:59:01.832  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Starting MallApplication on PC-2019052701 with PID 3080 (D:\IntelliJ IDEA 2020.1\mall\target\classes started by PC in D:\IntelliJ IDEA 2020.1\mall)
+2020-08-24 08:59:01.832  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : No active profile set, falling back to default profiles: default
+2020-08-24 08:59:02.004  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-08-24 08:59:02.028  INFO 3080 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 5 JPA repository interfaces.
+2020-08-24 08:59:02.147  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-08-24 08:59:02.148  INFO 3080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-24 08:59:02.148  INFO 3080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-24 08:59:02.162  INFO 3080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-24 08:59:02.162  INFO 3080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 326 ms
+2020-08-24 08:59:02.203  INFO 3080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-24 08:59:02.212  INFO 3080 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-24 08:59:02.221  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2020-08-24 08:59:02.225  INFO 3080 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2020-08-24 08:59:02.226  INFO 3080 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-08-24 08:59:02.315  WARN 3080 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-24 08:59:02.364  WARN 3080 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-08-24 08:59:02.405  INFO 3080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-24 08:59:02.427  INFO 3080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-24 08:59:02.428  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories¡­
+2020-08-24 08:59:02.496  INFO 3080 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-24 08:59:02.497  INFO 3080 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-24 08:59:02.632  INFO 3080 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-08-24 08:59:02.635  INFO 3080 --- [restartedMain] whut.mall.MallApplication                : Started MallApplication in 0.827 seconds (JVM running for 884.148)
+2020-08-24 08:59:02.637  INFO 3080 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-08-24 08:59:07.915  INFO 3080 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-24 08:59:07.915  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-24 08:59:07.920  INFO 3080 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms

@@ -89,7 +89,7 @@
                     </div>
                     <div class="ui error mini message"></div>
                     <!-- #strings内置对象   -->
-                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}" style="color: red">111</div>
+                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}" style="color: #ff0000"></div>
 
                 </form>
 
@@ -154,11 +154,11 @@
 <script type="text/javascript">
     $(document).ready(function(){
         //加载页首页面
-        $("#headPage").load("../template/headTemplate.html");
+        $("#headPage").load("../templates/template/headTemplate.html");
         //加载页脚页面
-        $("#footerPage").load("../template/footerTemplate.html");
+        $("#footerPage").load("../templates/template/footerTemplate.html");
     });
-
+  //  http://localhost:8080/templates/template/headTemplate.html
     // $("#btn-login").click(function () {//用户登录提交按钮
     //     // 控制器路径
     //     var url = "../../user/login.do";

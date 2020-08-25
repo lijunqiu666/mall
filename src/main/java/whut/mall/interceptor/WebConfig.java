@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import java.util.List;
+
 /**
  * mall
  * 2020/8/23 10:10
@@ -19,5 +21,4 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 .excludePathPatterns("/user")
                 .excludePathPatterns("/user/login");
     }
-
 }

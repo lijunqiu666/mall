@@ -80,15 +80,15 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label"></label>
                             <div class="col-md-8">
-                                <a href="login_1.html"><input id="btn-login" class="btn btn-primary" type="button" value="用户登录"/></a>
-
+                                <a href="index.html"> <input id="btn-login" class="btn btn-primary" type="button" value="用户登录"/>
+                                </a>
                                 <!--                            跳转解析不了-->
-                                <span class="pull-right"><small>还没有账号？</small><a href="register.html">注册</a></span>
+                                <span class="pull-right"><small>还没有账号？</small><a href="/user/jump_to_register">注册</a></span>
                             </div>
                         </div>
                         <div class="ui error mini message"></div>
                         <!-- #strings内置对象   -->
-                        <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}" style="color: red"></div>
+                        <div class="ui mini negative message" style="color: red">用户名或者密码输入错误</div>
 
                     </form>
 

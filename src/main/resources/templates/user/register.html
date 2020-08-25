@@ -68,14 +68,14 @@
             <div class="form-group">
                 <label class="col-md-3 control-label"></label>
                 <div class="col-md-8">
-                    <input id="btn-reg" class="btn btn-primary" type="submit" value="立即注册"/>
+                    <a href="login.html"><input id="btn-reg" class="btn btn-primary" type="button" value="立即注册" onclick="function 1() {
+                      alert("注册成功！");
+                    }"/></a>
 
                     <span class="pull-right"><small>已经有账号？</small><a href="/user">登录</a></span>
                 </div>
             </div>
             <div class="ui error mini message"></div>
-            <!-- #strings内置对象   -->
-            <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">111</div>
 
         </form>
     </div>
@@ -94,29 +94,9 @@
         $("#footerPage").load("../template/footerTemplate.html");
     });
 
-
-    // 为注册按钮绑定单击事件
-    // $("#btn-reg").click(function () {
-    //     var url = "../../../user/register";
-    //     // 将前端数据封装到data中
-    //     var data = $("#form-reg").serialize();
-    //     console.log("注册参数：" + data);
-    //     $.ajax({
-    //         "url": url,
-    //         "data": data,
-    //         "type": "POST",
-    //         "dataType": "json",
-    //         "success": function (json) {
-    //             // alert(json.state);
-    //             if (json.state == 200) {
-    //                 alert("注册成功!");
-    //                 location.href = "login.html";
-    //             } else {
-    //                 alert(json.message);
-    //             }
-    //         }
-    //     });
-    // });
+    function f1(){
+        alert("注册成功！")
+    };
 
 </script>
 </body>

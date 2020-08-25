@@ -5,10 +5,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import whut.mall.entity.Product;
 import whut.mall.entity.ProductQuery;
@@ -38,8 +35,9 @@ public class ProductController {
     }
 
     // 跳转到user的index
-    @GetMapping("/Product2")
-    public String Product2(@PageableDefault(size = 3) Pageable pageable, Model model) {
+    @RequestMapping(value = "/Product2", method= RequestMethod.GET)
+    public String Product2(@PageableDefault(page=2,size = 3) Pageable pageable, Model model) {
+
         model.addAttribute("stocks", stockService.listStock());
         model.addAttribute("page", productService.listProduct(pageable));
         return "user/index";

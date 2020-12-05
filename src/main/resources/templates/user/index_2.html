@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>军训必需品平台</title>
+    <!--导入核心文件-->
+    <script src="../../static/bootstrap3/js/holder.js"></script>
+    <link href="../../static/bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../static/bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../../static/bootstrap3/js/bootstrap.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/webindex.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/top.css"/>
+</head>
+
+<body>
+
+<!--头部-->
+<div id="headPage"></div>
+
+<div class="clearfix"></div>
+
+
+<div class="clearfix"></div>
+<hr/>
+<!--推荐栏目-->
+<div class="col-md-offset-1 col-md-10">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">商品一览表</h3>
+        </div>
+        <div id="newList" class="panel-body panel-item">
+
+            <table class="ui celled table">
+                <tbody>
+                <tr th:each="product : ${page.content}">
+                    <td class="col-md-2"><div><img src="../../static/images/product/6.jpg" width="100%" height="100%"/></div></td>
+                    <td class="col-md-8"><a href="product.html">富光大号玻璃杯超大容量双层水杯泡茶杯男女便携1L防摔杯子1000ml</a></td>
+                    <td th:text="${product.price}">￥ 50</td>
+
+                </tr>
+
+                <tr>
+                    <td class="col-md-2"><div><img src="../../static/images/product/7.jpg" width="100%" height="100%"/></div></td>
+                    <td class="col-md-8"><a href="">运动减震鞋垫男吸汗防臭透气除臭鞋垫女士软底舒适软超软加绒加厚</a></td>
+                    <td th:text="${product.price}">￥ 30</td>
+
+                </tr>
+
+                <tr th:each="product : ${page.content}">
+                    <td class="col-md-2"><div><img src="../../static/images/product/8.jpg" width="100%" height="100%"/></div></td>
+                    <td class="col-md-8"><a href="">夏季POLO衫工作服定制公司T恤定做DIY男纯棉短袖工衣衣服印字logo</a></td>
+                    <td th:text="${product.price}">￥ 30</td>
+
+                </tr>
+
+                <tr th:each="product : ${page.content}">
+                    <td class="col-md-2"><div><img src="../../static/images/product/9.jpg" width="100%" height="100%"/></div></td>
+                    <td class="col-md-8"><a href="">回力拖鞋男士夏天室内浴室洗澡防滑居家用凉拖鞋女情侣外穿厚底潮</a></td>
+                    <td th:text="${product.price}">￥ 50</td>
+
+                </tr>
+
+                <tr th:each="product : ${page.content}">
+                    <td class="col-md-2"><div><img src="../../static/images/product/10.jpg" width="100%" height="100%"/></div></td>
+                    <td class="col-md-8"><a href="">迷彩服套装男荒漠学生军训服夏季薄款女军装特种兵耐磨劳保工作服</a></td>
+                    <td th:text="${product.price}">￥ 50</td>
+
+                </tr>
+
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="6">
+                        <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
+                            <a  class="item" href="index.html">上一页</a>
+                            <a  class="item" href="index_2.html">下一页</a>
+                        </div>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="clearfix"></div>
+
+<!-- 页脚 -->
+<div id="footerPage"></div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //加载页首页面
+        $("#headPage").load("../template/topTemplate.html");
+        //加载页脚页面
+        $("#footerPage").load("../template/footerTemplate.html");
+
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        //这里和下面的是出现一些产品的接口
+        var url = "/admin/Product";
+        // 发送ajax请求，并处理请求
+        $.ajax({
+            "url": url,
+            "type": "POST",
+            "data": {},
+            "dataType": "json",
+            "success": function (json) {
+                if (json.state == 200) {
+                } else {
+                    alert(json.message);
+                }
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

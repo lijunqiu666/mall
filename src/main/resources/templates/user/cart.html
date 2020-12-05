@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>军训必需品平台</title>
+    <!--导入核心文件-->
+    <script src="../../static/bootstrap3/js/holder.js"></script>
+    <link href="../../static/bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../static/bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../../static/bootstrap3/js/bootstrap.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/cart.css"/>
+    <script src="../../static/js/cart.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+<!--头部-->
+<div id="headPage"></div>
+
+
+<div class="col-md-offset-1 col-md-10">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title"><img class="myicon" src="../../static/images/icon/购物车.png"/> 购物车</h3>
+        </div>
+        <div class="panel-body">
+            <!--下面表单中需要添加method，和action=跳转的页面，通过submit提交数据给下一个页面-->
+            <form role="form" method="get" action="">
+<!-- 啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 -->
+                <!--购物车表格开始-->
+                <table class="cart-table" width="100%">
+                    <thead>
+                    <tr>
+                        <th width="8%">
+                            <input type="checkbox" class="ckall" onclick="checkall(this)"/>全选
+                        </th>
+                        <th width="110"></th>
+                        <th width="29%">商品</th>
+                        <th width="11%">单价</th>
+                        <th width="15%">数量</th>
+                        <th width="11%">金额</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="cart-list" class="cart-body">
+                    <tr th:each="cart,iterStat : ${page.content}">
+                        <span name="cart_id" th:text="${cart.id}" hidden="hidden"></span>
+
+                        <td>  <!--      eq:(0)        -->
+                        <input type="checkbox" name="cart_id" value="${cart.id}" class="ckitem" onclick="chooseOne()"/>
+                        </td>
+
+                        <td><img src="../../static/images/product/1.jpg" width="110"/></td>
+
+                        <td>100片夏季冰凉贴降温神器冰贴解暑避暑降暑消暑学生成人清凉贴</td>
+
+                        <td  name="price">￥ 15</td>   <!--       eq(3)           -->
+
+                        <td>
+                        <a href="#" th:href="@{/cart/reduce_count/{id}(id=${cart.id})}" class="layui-btn" onclick="calcTotal()">-</a>
+                        <span th:text="${cart.quantity}">1</span>
+                        <a href="#" th:href="@{/cart/add_count/{id}(id=${cart.id})}" class="layui-btn" onclick="calcTotal()">+</a>
+                        </td>
+
+                        <td><span name="goodsTotalPrice">15.00</span></td> <!--       eq(5)           -->
+
+                        <td><input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="删除"/></td>
+                        </tr>
+
+                    </tr>
+
+                    <tr>
+                        <span name="cart_id" th:text="${cart.id}" hidden="hidden"></span>
+
+                        <td>  <!--      eq:(0)        -->
+                            <input type="checkbox" name="cart_id" value="${cart.id}" class="ckitem" onclick="chooseOne()"/>
+                        </td>
+
+                        <td><img src="../../static/images/product/3.jpg" width="110"/></td>
+
+                        <td>定型军被正品帆布成型棉军被子内务标兵豆腐块模型军训叠军被神器</td>
+
+                        <td  name="price">￥ 80</td>   <!--       eq(3)           -->
+
+                        <td>
+                            <a href="#" th:href="@{/cart/reduce_count/{id}(id=${cart.id})}" class="layui-btn" onclick="calcTotal()">-</a>
+                            <span th:text="${cart.quantity}">1</span>
+                            <a href="#" th:href="@{/cart/add_count/{id}(id=${cart.id})}" class="layui-btn" onclick="calcTotal()">+</a>
+                        </td>
+
+                        <td><span name="goodsTotalPrice">80.00</span></td> <!--       eq(5)           -->
+
+                        <td><input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="删除"/></td>
+                    </tr>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+                <div class="total-bar">
+                    <a href="javascript:selDelCart()" class="cart-del-sel btn btn-default btn-xs">删除所选商品</a>
+                    <span class="pull-right">已选商品
+								<span id="selectCount">0</span>件 总价¥
+							<span id="selectTotal">0</span>元
+
+							</span>
+
+                </div>
+                <div>
+							<span class="pull-right">
+								<input type="button" value="  结  算  " class="btn btn-primary btn-lg link-account" onclick="buyIt()"/>
+							</span>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<!-- 页脚 -->
+<div id="footerPage"></div>
+
+<!--页脚结束-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        //加载页首页面
+        $("#headPage").load("../template/headTemplate.html");
+        //加载页脚页面
+        $("#footerPage").load("../template/footerTemplate.html");
+    });
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log("已经启动，看看价格吧");
+    });
+
+    /*全选全不选*/
+    function checkall(ckbtn) {
+        $(".ckitem").prop("checked", $(ckbtn).prop("checked"));
+        $("#selectTotal").html("95.00");
+        $("#selectCount").html(2);
+    }
+
+
+
+    function buyIt(){
+    alert("购买成功");
+     location.href="index.html";
+    }
+
+</script>
+</body>
+
+</html>

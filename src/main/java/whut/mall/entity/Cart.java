@@ -1,7 +1,7 @@
 package whut.mall.entity;
 
 import javax.persistence.*;
-
+import java.util.Date;
 
 
 /**
@@ -14,18 +14,29 @@ import javax.persistence.*;
 @Table(name = "cart")
 public class Cart {
 
+
+
     @Id
     @GeneratedValue
     Long id;//id
-
+    @ManyToOne
     Product product;//产品
     Integer quantity;//数量
     @ManyToOne
     User user;//用户
-
+@Temporal(TemporalType.TIMESTAMP)
+    Date update_time;//更新或创建时间
     public Cart() {
     }
 
+
+    public Date getUpdate_time() {
+        return update_time;
+    }
+
+    public void setUpdate_time(Date update_time) {
+        this.update_time = update_time;
+    }
     public Long getId() {
         return id;
     }
@@ -58,6 +69,7 @@ public class Cart {
         this.user = user;
     }
 
+
     @Override
     public String toString() {
         return "Cart{" +
@@ -65,6 +77,7 @@ public class Cart {
                 ", product=" + product +
                 ", quantity=" + quantity +
                 ", user=" + user +
+                ", update_time=" + update_time +
                 '}';
     }
 }

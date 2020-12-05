@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>军训必需品平台</title>
+    <!--导入核心文件-->
+    <script src="../../static/bootstrap3/js/holder.js" type="text/javascript"></script>
+    <link href="../../static/bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="../../static/bootstrap3/jquery-1.9.1.min.js"></script>
+    <script src="../../static/bootstrap3/js/bootstrap.js"></script>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="../../static/bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/top.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/login.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/footer.css"/>
+    <script src="../../static/bootstrap3/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../static/js/autoLogin.js" type="text/javascript"></script>
+    <script src="../../static/layui/layui.js"></script>
+
+</head>
+
+<body>
+
+<!--头部-->
+<div id="headPage"></div>
+<br/>
+<!--主体-->
+<div class="container mycontent text-left">
+    <!--透明层 -->
+    <div class="loginDiv">
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">
+                    <h4>用户登录
+                    </h4>
+                </li>
+                <li>
+                    <h4>管理员登录
+                    </h4>
+                </li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <!--                这个是用户登录的具体内容-->
+
+
+
+                    <!--表单开始-->
+                    <form id="form-login" class="form-horizontal" role="form" action="/user/login" method="post">
+                        <!--用户名-->
+                        <div class="form-group">
+                            <label for="username" class="col-md-3 control-label">用户账号：</label>
+                            <div class="col-md-8">
+                                <input name="username" type="text" class="form-control" id="username" placeholder="请输入用户名">
+                            </div>
+                        </div>
+                        <!--密码-->
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label"> 密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</label>
+                            <div class="col-md-8">
+                                <input name="password" type="password" class="form-control" id="password" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <!-- 记住我-->
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-6">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="auto">自动登录
+                                    </label>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--提交按钮-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label"></label>
+                            <div class="col-md-8">
+                                <a href="login_1.html"><input id="btn-login" class="btn btn-primary" type="button" value="用户登录"/></a>
+
+                                <!--                            跳转解析不了-->
+                                <span class="pull-right"><small>还没有账号？</small><a href="register.html">注册</a></span>
+                            </div>
+                        </div>
+                        <div class="ui error mini message"></div>
+                        <!-- #strings内置对象   -->
+                        <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}" style="color: red"></div>
+
+                    </form>
+
+                </div>
+                <div class="layui-tab-item">
+
+                    <!--表单开始-->
+                    <form id="form-login-admin" class="form-horizontal" role="form" action="/admin/login" method="post">
+                        <!--用户名-->
+                        <div class="form-group">
+                            <label for="username" class="col-md-3 control-label">管理员账号：</label>
+                            <div class="col-md-8">
+                                <input name="username" type="text" class="form-control" id="adminname" placeholder="请输入管理员名">
+                            </div>
+                        </div>
+                        <!--密码-->
+                        <div class="form-group">
+                            <label for="password" class="col-md-3 control-label"> 密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</label>
+                            <div class="col-md-8">
+                                <input name="password" type="password" class="form-control" id="password-admin" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <!-- 记住我-->
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-6">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="auto-admin">自动登录
+                                    </label>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!--提交按钮-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label"></label>
+                            <div class="col-md-8">
+                                <input id="btn-login-admin" class="btn btn-primary" type="submit" value="管理员登录"/>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<!-- 页脚 -->
+<div id="footerPage"></div>
+<!-- 页脚结束 /-->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        //加载页首页面
+        $("#headPage").load("../template/headTemplate.html");
+        //加载页脚页面
+        $("#footerPage").load("../template/footerTemplate.html");
+    });
+
+    // $("#btn-login").click(function () {//用户登录提交按钮
+    //     // 控制器路径
+    //     var url = "../../user/login.do";
+    //     // 对表单序列化操作，input框内容封装到data中
+    //     var data = $("#form-login").serialize();
+    //     $.ajax({
+    //         "url": url,
+    //         "data": data,
+    //         "type": "POST",
+    //         "dataType": "json",//json数据交互
+    //         "success": function (json) {
+    //             if (json.state === 200) {
+    //                 alert("登录成功!");
+    //                 location.href = "index.html";
+    //                 // 将头像数据保存到cookies中
+    //                 $.cookie("avatar", json.data.avatar, {
+    //                     expires: 7
+    //                 });
+    //                 console.log("登录成功，将头像路径存到Cookie：" + $.cookie("avatar"));
+    //             } else {
+    //                 alert(json.message);
+    //             }
+    //         }
+    //     });
+    // });
+    //
+    // $("#btn-login-admin").click(function () {//管理员登录提交按钮
+    //     // 控制器路径
+    //     var url = "../../admin/login.do";
+    //     // 对表单序列化操作，input框内容封装到data中
+    //     var data = $("#form-login").serialize();
+    //     $.ajax({
+    //         "url": url,
+    //         "data": data,
+    //         "type": "POST",
+    //         "dataType": "json",//json数据交互
+    //         "success": function (json) {
+    //             if (json.state === 200) {
+    //                 alert("登录成功!");
+    //                 location.href = "index.html";
+    //                 // 将头像数据保存到cookies中
+    //                 $.cookie("avatar", json.data.avatar, {
+    //                     expires: 7
+    //                 });
+    //                 console.log("登录成功，将头像路径存到Cookie：" + $.cookie("avatar"));
+    //             } else {
+    //                 alert(json.message);
+    //             }
+    //         }
+    //     });
+    // });
+
+    layui.use('element', function(){
+        var $ = layui.jquery
+            ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+        //触发事件
+        var active = {
+            tabChange: function(){
+                //切换到指定Tab项
+                element.tabChange('demo', '22'); //切换到：用户管理
+            }
+        };
+
+        $('.site-demo-active').on('click', function(){
+            var othis = $(this), type = othis.data('type');
+            active[type] ? active[type].call(this, othis) : '';
+        });
+
+        //Hash地址的定位
+        var layid = location.hash.replace(/^#test=/, '');
+        element.tabChange('test', layid);
+        element.on('tab(test)', function(elem){
+            location.hash = 'test='+ $(this).attr('lay-id');
+        });
+
+    });
+
+
+</script>
+</body>
+</html>
